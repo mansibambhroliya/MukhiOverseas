@@ -1,0 +1,213 @@
+
+.top-line{
+    background-color: var(--color-nevy-blue);
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.top-line .top-line-space {
+    padding: 10px 180px;
+}
+
+.top-line .f-div{
+    color: rgb(209, 218, 225);
+}
+
+.top-line .mail-btn, .top-line .sms-btn {
+    border: none;
+    padding: 3px 12px;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 13px;font-weight: bold;
+}
+.top-line .mail-btn{
+    background-color: rgb(209, 218, 225) ;
+}
+
+.top-line .sms-btn, .contact-sec .btn-send{
+    background-color: rgb(8, 100, 100) ;
+}
+.modal-footer button:hover ,.contact-sec .btn-send:hover{
+    background-color: #011717;
+}
+
+.top-line .btn1 div div{
+    padding: 10px 0;
+    border: 1px solid rgb(176, 171, 171);
+    margin: 10px 0;
+    display: flex;
+    border-radius: 10px;
+}
+
+.top-line .btn1 div div select{
+    color: rgb(210, 213, 221);
+}
+
+.top-line .btn1 div div input ,.top-line select ,.top-line textarea{
+    border: none;
+    outline: none;
+}
+
+.top-line .e-icon{
+    margin: 0 10px;
+    font-size: 19px;
+    color: rgb(101, 97, 97);
+}
+
+.modal-footer button, .contact-sec .btn-send{
+    padding: 10px 20px;
+    border-radius: 2px;
+    color: aliceblue;
+    border: none;
+}
+
+
+/* --------------------------------- About Name */
+.about-sec{
+    background-image: url('../img/asset\ 52.png'); 
+    background-color: var(--color-cyan);
+}
+.about-sec .about-space{
+    height: 90px;
+    padding: 0px 180px;
+}
+
+.about-sec .mini-name{
+    font-size: 12px;
+}
+
+
+/* {--------------------------- Start Description About us ------------------------------} */
+.disc-about-sec {
+    font-size: 13px;
+    text-align: justify;
+}
+
+.disc-about-sec .a1-font ul li{
+    line-height: 25px;
+}
+.disc-about-sec table{
+    margin-top: 70px;
+}
+.disc-about-sec table tr th{
+    padding: 10px;
+    text-align: end;
+    background-color: rgba(242, 244, 246, 0.5);
+}
+
+.disc-about-sec  table tr td{
+    padding-left: 10px;
+}
+
+.disc-about-sec table tr th, .disc-about-sec table tr td{
+    border: 1px solid rgba(142, 142, 142,0.5);
+}
+
+.disc-about-sec .link-col span a ,.disc-about-sec .link-col span ,.accord-p .link-col span a{ 
+    color: rgb(118, 116, 116) ;
+    font-weight: 600;
+    line-height: 25px !important;
+}
+.disc-about-sec .prod-div {
+    border-bottom: 2px solid #008B8B;
+}
+.disc-about-sec .link-col p a ,.accord-p .link-col  div p a{
+    color: black;
+    font-weight: bold;
+}
+
+.disc-about-sec .link-col  div ,.accord-p .link-col  div{
+    border-bottom: 0.1px solid rgba(142, 142, 142,0.4) ;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+.disc-about-sec .con-div .contain p , .accord-c .contain p{
+    text-align: left ;
+    border-bottom: 0.1px dashed rgba(142, 142, 142,0.5);
+    font-size: 12px ;
+
+}
+.mail-wrap{
+    word-wrap: break-word ;
+}
+
+/* --------------------------------------- Contact US */
+
+.contact-sec , .contact-sec .contact a {
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    color: inherit;
+}
+
+.contact-sec .contact p {
+    display: flex;
+    margin-bottom: 25px;
+}
+.contact-sec .cont-icon{
+    margin-right: 10px;
+}
+
+.contact-sec .cont-bg{
+    background-color:  rgba(195, 190, 190, 0.4) ;
+}
+
+.contact-sec .pad{
+    padding: 45px 50px;
+}
+
+.contact-sec .row input , .contact-sec textarea, .contact-sec select{
+    padding: 10px 0;
+}
+.contact-sec .cont-bg .row div{
+    display: flex;
+    background-color: white;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.contact-sec .div-border{
+ border: 1px solid rgba(195, 190, 190, 0.8);
+}
+.contact-sec .div-border input, .contact-sec .div-border textarea, .contact-sec .div-border select{
+    width: 100%;
+    border: none;
+    outline: none;
+}
+.contact-sec .div-border span{
+    color: red;
+    font-size: 16px;
+}
+
+/* -----------------------sliders */
+.sli .pad-div {
+    width: 300px;
+    padding: 10px;
+}
+.sli .img-w{
+    background-color: rgba(239, 232, 232,0.4);
+    height: 200px;
+}
+
+
+/* ---------------------------------------------- Mini Footer */
+.mini-footer .general-link a {
+    padding-left: 8px;
+    padding-right: 8px;
+    font-weight: bold;
+}
+.mini-footer .general-link{
+    font-weight: bold;
+    line-height: 19.5px;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    overflow-wrap: break-word;
+}
+
+.error{
+    color: red;
+}
