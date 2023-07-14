@@ -7,35 +7,38 @@ import Carousel from 'react-bootstrap/Carousel';
 import Accordion from 'react-bootstrap/Accordion';
 import Carouse from "react-multi-carousel";
 import Gotoup from './Gotoup';
-
+import Collapse from 'react-bootstrap/Collapse';
 
 export default function Home() {
 
+  const [isActive, setIsActive] = useState(false); // for accordian
+
+  // ---------------------- for product card Slider
   const [index, setIndex] = useState(0);
 
   const handleSelect = (selectedIndex) => {
     setIndex(selectedIndex);
   };
 
-  const responsive = {
-    superLargeDesktop: {
-      // the naming can be any, depends on you.
-      breakpoint: { max: 4000, min: 3000 },
-      items: 5
-    },
-    desktop: {
-      breakpoint: { max: 3000, min: 1024 },
-      items: 4
-    },
-    tablet: {
-      breakpoint: { max: 1024, min: 464 },
-      items: 2
-    },
-    mobile: {
-      breakpoint: { max: 464, min: 0 },
-      items: 1
-    }
-  };
+  // const responsive = {
+  //   superLargeDesktop: {
+  //     // the naming can be any, depends on you.
+  //     breakpoint: { max: 4000, min: 3000 },
+  //     items: 5
+  //   },
+  //   desktop: {
+  //     breakpoint: { max: 3000, min: 1024 },
+  //     items: 4
+  //   },
+  //   tablet: {
+  //     breakpoint: { max: 1024, min: 464 },
+  //     items: 2
+  //   },
+  //   mobile: {
+  //     breakpoint: { max: 464, min: 0 },
+  //     items: 1
+  //   }
+  // };
 
 
   return (
@@ -140,7 +143,7 @@ export default function Home() {
 
       {/*---------------------------- Start Product Range ----------------------- */}
       <section className='range-sec'>
-        <div>
+        <div className='container'>
           <div>
             <h1 className='font-cyan text-center prod-range'>Product <span className='text-black'>Range</span></h1>
           </div>
@@ -162,7 +165,7 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className=" d-flex  justify-content-center">
+              <div className="justify-center">
                 <div className='range-div-w border'>
                   <div className='r2-img range-img-w div-hover'>
                     <div className="bg-blur"></div>
@@ -176,7 +179,7 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="d-flex justify-content-center">
+              <div className="justify-center">
                 <div className='range-div-w border'>
                   <div className='r3-img range-img-w div-hover'>
                     <div className="bg-blur"></div>
@@ -190,7 +193,7 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="d-flex justify-content-center">
+              <div className="justify-center">
                 <div className='range-div-w border'>
                   <div className='r4-img range-img-w div-hover'>
                     <div className="bg-blur"></div>
@@ -205,7 +208,7 @@ export default function Home() {
               </div>
 
 
-              <div className="d-flex justify-content-center">
+              <div className="justify-center">
                 <div className='range-div-w border'>
                   <div className='r5-img range-img-w div-hover'>
                     <div className="bg-blur"></div>
@@ -219,7 +222,7 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="d-flex justify-content-center">
+              <div className="justify-center">
                 <div className='range-div-w border'>
                   <div className='r6-img range-img-w div-hover'>
                     <div className="bg-blur"></div>
@@ -233,7 +236,7 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="d-flex justify-content-center">
+              <div className="justify-center">
                 <div className='range-div-w border'>
                   <div className='r7-img range-img-w div-hover'>
                     <div className="bg-blur"></div>
@@ -247,7 +250,7 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="d-flex justify-content-center">
+              <div className="justify-center">
                 <div className='range-div-w border'>
                   <div className='r8-img range-img-w div-hover'>
                     <div className="bg-blur"></div>
@@ -264,40 +267,112 @@ export default function Home() {
             </div>
           </div>
 
-          <div className='mt-5 d-flex justify-content-center'>
+          <div className='mt-5 justify-center'>
             <Link to="/products">
               <input type="button" value='View All Products' className='view-all-btn bg-white font-cyan fw-semibold border py-2 px-4' />
             </Link>
           </div>
         </div>
       </section>
+
+      {/* <section className='range-sec'>
+        <div className='container'>
+          <div className="row g-5">
+            <div className="col-lg-3 col-md-4 col-sm-6 justify-center">
+              <div className='range-div-w border'>
+                <div className='r1-img range-img-w div-hover '>
+                  <div className="bg-blur"></div>
+                  <Link to="/pomegranate" className='sub-img'>
+                    <img src={require('../img/asset 37.jpeg')} alt="" title='Piper Sudan Grass Seed' />
+                  </Link>
+                </div>
+                <div className='range-font'>
+                  <Link to="" title='Piper Sudan Grass Seed'>Piper Sudan Grass Seed</Link>
+                </div>
+              </div>
+            </div>
+            <div className="col-lg-3 col-md-4 col-sm-6 justify-center">
+              <div className='range-div-w border'>
+                <div className='r1-img range-img-w div-hover '>
+                  <div className="bg-blur"></div>
+                  <Link to="/pomegranate" className='sub-img'>
+                    <img src={require('../img/asset 37.jpeg')} alt="" title='Piper Sudan Grass Seed' />
+                  </Link>
+                </div>
+                <div className='range-font'>
+                  <Link to="" title='Piper Sudan Grass Seed'>Piper Sudan Grass Seed</Link>
+                </div>
+              </div>
+            </div>
+            <div className="col-lg-3 col-md-4 col-sm-6 justify-center">
+              <div className='range-div-w border'>
+                <div className='r1-img range-img-w div-hover '>
+                  <div className="bg-blur"></div>
+                  <Link to="/pomegranate" className='sub-img'>
+                    <img src={require('../img/asset 37.jpeg')} alt="" title='Piper Sudan Grass Seed' />
+                  </Link>
+                </div>
+                <div className='range-font'>
+                  <Link to="" title='Piper Sudan Grass Seed'>Piper Sudan Grass Seed</Link>
+                </div>
+              </div>
+            </div>
+            <div className="col-lg-3 col-md-4 col-sm-6 justify-center">
+              <div className='range-div-w border'>
+                <div className='r1-img range-img-w div-hover '>
+                  <div className="bg-blur"></div>
+                  <Link to="/pomegranate" className='sub-img'>
+                    <img src={require('../img/asset 37.jpeg')} alt="" title='Piper Sudan Grass Seed' />
+                  </Link>
+                </div>
+                <div className='range-font'>
+                  <Link to="" title='Piper Sudan Grass Seed'>Piper Sudan Grass Seed</Link>
+                </div>
+              </div>
+            </div>
+            <div className="col-lg-3 col-md-4 col-sm-6 justify-center">
+              <div className='range-div-w border'>
+                <div className='r1-img range-img-w div-hover '>
+                  <div className="bg-blur"></div>
+                  <Link to="/pomegranate" className='sub-img'>
+                    <img src={require('../img/asset 37.jpeg')} alt="" title='Piper Sudan Grass Seed' />
+                  </Link>
+                </div>
+                <div className='range-font'>
+                  <Link to="" title='Piper Sudan Grass Seed'>Piper Sudan Grass Seed</Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section> */}
       {/*---------------------------- End Product Range ----------------------- */}
 
 
       {/*---------------------------- Start Featured Products ----------------------- */}
-      <section>
-        <div className='featured-main full-pad'>
+      <section className='featured-main'>
+        <div className=' container fruit-div'>
           <div>
             <h1 className='text-center feature-title'>Featured Products</h1>
           </div>
 
-          <div className="row pb-5">
+          <div className="row mb-5">
 
-            <div className="col-xl-3 col-lg-3 col-md-4 col-sm-6 justify-center">
+            <div className="col-lg-3 col-md-4 col-sm-6 justify-center">
               <div>
                 <div className='f1-img img-w'>
                   <div className="bg-blur"></div>
                   <Link to="/pomegranate" className='sub-img'>
-                    <img src={require('../img/asset 14.jpeg')} alt="" />
+                    <img src={require('../img/asset 14.jpeg')} alt="" className='img-fluid' />
                   </Link>
                 </div>
-                <div className='featured-font'>
+                <div className='featured-font '>
                   <Link to="/pomegranate" title='Fresh Pomegranate'>Fresh Pomegranate</Link>
                 </div>
               </div>
             </div>
 
-            <div className="col-xl-3 col-lg-3 col-md-4 col-sm-6 justify-center">
+            <div className="col-lg-3 col-md-4 col-sm-6 justify-center">
               <div>
                 <div className='f2-img img-w'>
                   <div className="bg-blur"></div>
@@ -312,7 +387,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="col-xl-3 col-lg-3 col-md-4 col-sm-6 justify-center">
+            <div className="col-lg-3 col-md-4 col-sm-6 justify-center">
               <div>
                 <div className='f3-img img-w'>
                   <div className="bg-blur"></div>
@@ -326,7 +401,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="col-xl-3 col-lg-3 col-md-4 col-sm-6 justify-center">
+            <div className="col-lg-3 col-md-4 col-sm-6 justify-center">
               <div>
                 <div className='f4-img img-w'>
                   <div className="bg-blur"></div>
@@ -344,7 +419,7 @@ export default function Home() {
 
             {/* ---------------------------------------- */}
 
-            <div className="col-xl-6 col-lg-3 col-md-4 col-sm-6 justify-end justify-center">
+            <div className="col-lg-3 col-md-4 col-sm-6 justify-end justify-center">
               <div>
                 <div className='f5-img img-w'>
                   <div className="bg-blur"></div>
@@ -358,7 +433,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="col-xl-6 col-lg-3 col-md-4 col-sm-6 justify-start justify-center">
+            <div className="col-lg-3 col-md-4 col-sm-6 justify-start justify-center">
               <div>
                 <div className='f6-img img-w'>
                   <div className="bg-blur"></div>
@@ -376,11 +451,13 @@ export default function Home() {
 
         </div>
       </section>
+
       {/*---------------------------- End Featured Products ----------------------- */}
 
       {/*---------------------------- Start Products Name ----------------------- */}
-      <section className='container-fluid spacer-p-name full-pad'>
-        <div className='border pname-div'>
+      <section className='container-fluid spacer-p-name full-pad '>
+
+        <div className='border pname-div '>
           <div className='div-2'>
             <h5 className='fw-semibold'>Products</h5>
           </div>
@@ -401,24 +478,30 @@ export default function Home() {
         </div>
 
         {/* accordian */}
-        <Accordion defaultActiveKey="0" className='accord-p'>
-          <Accordion.Item eventKey="0">
-            <Accordion.Header><h6 className='fw-semibold'>Products</h6></Accordion.Header>
-            <Accordion.Body>
-              <div class="accordion-body font-black product-text">
-                <Link to="/indian rices" >Indian Rices</Link><br />
-                <Link to="/indian rices" >Fresh Fruits</Link><br />
-                <Link to="/indian rices" >Grains</Link><br />
-                <Link to="/indian rices" >Fresh Vegetables</Link><br />
-                <Link to="/indian rices" >Fodder seeds</Link><br />
-                <Link to="/indian rices" >Indian Spices</Link>
-              </div>
-            </Accordion.Body>
-          </Accordion.Item>
-
-        </Accordion>
+        <div className="accordion border accord-p">
+          <div className="bottom-border align-center"
+            onClick={() => setIsActive(!isActive)}
+            aria-controls="example-collapse-text"
+            aria-expanded={isActive}
+          >
+            <div className='product-name-title'><h1 className='fw-semibold'>Products</h1></div>
+            <div className='arrow-plus'>{isActive ? '-' : '+'}</div>
+          </div>
+          <Collapse in={isActive}>
+            <div className='font-black product-text px-3 py-2'>
+              <Link to="/indian rices" >Indian Rices</Link><br />
+              <Link to="/indian rices" >Fresh Fruits</Link><br />
+              <Link to="/indian rices" >Grains</Link><br />
+              <Link to="/indian rices" >Fresh Vegetables</Link><br />
+              <Link to="/indian rices" >Fodder seeds</Link><br />
+              <Link to="/indian rices" >Indian Spices</Link>
+            </div>
+          </Collapse>
+        </div>
 
       </section>
+
+
       {/*---------------------------- End Products Name ----------------------- */}
 
       {/* <section className='container m-5 container-fluid'>
@@ -486,7 +569,6 @@ export default function Home() {
           
         </Carouse>
       </section> */}
-
 
       <Footer />
 

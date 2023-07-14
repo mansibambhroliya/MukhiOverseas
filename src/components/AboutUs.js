@@ -3,13 +3,19 @@ import Top_Line from './Top_Line'
 import Navbar from './Navbar'
 import { Link } from 'react-router-dom'
 import { BiChevronRight } from "react-icons/bi";
-import { AiOutlineFileText, AiOutlineUser, AiOutlineMail } from "react-icons/ai";
+import { AiOutlineFileText, AiOutlineUser, AiOutlineMail, AiOutlineRight } from "react-icons/ai";
 import { BsFillPencilFill } from "react-icons/bs";
 import Accordion from 'react-bootstrap/Accordion';
 import MIniFooter from './MIniFooter';
 import Gotoup from './Gotoup';
+import { useState } from 'react';
+import Collapse from 'react-bootstrap/Collapse';
 
 export default function AboutUs() {
+
+  const [isActive, setIsActive] = useState(false); // for accordian
+  const [isLink, setIsLink] = useState(false); // for accordian
+
   return (
     <>
       <Top_Line />
@@ -17,10 +23,11 @@ export default function AboutUs() {
       <Gotoup />
 
       {/* --------------------------- Start About Name bar ------------------------------ */}
-      <section>
-        <div className='about-sec theme-bg full-pad'>
+      <section className='theme-bg'>
+        <div className='about-sec full-pad '>
           <div className="row about-space container-fluid">
-            <div className="col-md-6 col-sm-12 d-flex align-items-md-center">
+
+            <div className="col-md-6 col-sm-12 d-flex align-items-md-center ">
               <h2 className='fs-4 text-white'>About Us</h2>
             </div>
 
@@ -29,7 +36,6 @@ export default function AboutUs() {
               <span className='mx-1 '><BiChevronRight></BiChevronRight></span>
               <span>About Us</span>
             </div>
-
           </div>
         </div>
       </section>
@@ -37,10 +43,10 @@ export default function AboutUs() {
 
       {/* --------------------------- Start Description About us ------------------------------ */}
       <section>
-        <div className='disc-about-sec full-pad my-3 container-fluid'>
+        <div className='disc-about-sec full-pad container-fluid'>
           <div className="row">
             <div className="col-md-9 col-sm-12 a1-font">
-              <div className='p-2 pb-0'>
+              <div>
                 <p>Mukhi Overseas has earned the trust and confidence of our global customers/buyers by providing best-in-class products, delivering it at the right time, round the clock and across the globe! We are into Export & Import of agricultural produce like Hulled Sesame Seeds, Spices, Rice, Food grains, Fruits & Vegetables and Animal Feed range worldwide. We focus on quality rather than quantity. For us, “Quantity is not the criteria rather Quality is the parameter!”</p>
                 <p>Mukhi Overseas is a Government of India Recognized Merchant Cum Export House, having diversified business into areas of Agricultural Commodities, Food Grains, Rice, Fruits & Vegetables and Animal Feed. Since 2018, the group has been making progress in leaps and bounds for exporting products and commodities to even the far-reaching corners of the world. Every day, we create sustainable models of adhering to the best practices in the industry. We have always endeavoured to offer the best of the quality products in the International markets. A truly remarkable export track record has earned us several prestigious Customers. Mukhi Overseas offers the best of Agricultural Commodities & Food Products.
                 </p>
@@ -102,76 +108,110 @@ export default function AboutUs() {
               </div>
             </div>
 
-            <div className="col-md-3 col-sm-12 a2-font ">
+            <div className="col-md-3 col-sm-12 px-2 a2-font ">
 
               <div className='border mb-3'>
-                <div className='pt-2 ps-3 font-darkcyan fw-bold fs-6 prod-div'>
-                  <p><Link to="/products" className='font-darkcyan'>Products</Link></p>
+                <div className='prod-div align-center'>
+                  <h1 className='font-darkcyan'><Link to="/products">Products</Link></h1>
                 </div>
 
-                <div className='px-3 pt-3 link-col '>
-                  <div>
-                    <p><Link to="/indianrice">Indian Rice</Link></p>
-                    <span><Link to="/basmatirice"><BiChevronRight></BiChevronRight>Basmatirice</Link></span><br />
-                    <span><Link to="/nonbasmatirice"><BiChevronRight></BiChevronRight>Non Basmatirice</Link></span>
-                  </div>
+                <div className='link-col'>
 
-                  <div>
-                    <p><Link to="/grains">Grains</Link></p>
-                    <span><Link to="/greenmillet"><BiChevronRight></BiChevronRight>Green Millet </Link></span><br />
-                    <span><Link to="/yellowmaize"><BiChevronRight></BiChevronRight>Yellow Maize </Link></span><br />
-                    <span><Link to="/barly"><BiChevronRight></BiChevronRight>Barly</Link></span><br />
-                    <span><Link to="/sorgum"><BiChevronRight></BiChevronRight>Sorgum </Link></span><br />
-                    <span><Link to="/wheat"><BiChevronRight></BiChevronRight>Wheat </Link></span><br />
-                    <span><Link to="sesameseeds"><BiChevronRight></BiChevronRight>Sesame Seeds </Link></span><br />
-                  </div>
+                  <ul className='ul-style'>
+                    <li ><Link to="/indianrice" className=''>Indian Rice</Link>
+                      <ul>
+                        <li><Link to="/basmatirice"><BiChevronRight></BiChevronRight>Basmatirice</Link></li>
+                        <li><Link to="/nonbasmatirice"><BiChevronRight></BiChevronRight>Non Basmatirice</Link></li>
+                      </ul>
+                    </li>
+                  </ul>
 
-                  <div>
-                    <p><Link to="/foddderseeds">Fodder Seeds</Link></p>
-                    <span><Link to="/alfalfagrassseeds"><BiChevronRight></BiChevronRight>Alfalfa Grass Seeds </Link></span><br />
-                    <span><Link to="/pipersudangrassseeds"><BiChevronRight></BiChevronRight>Piper Sudan Grass Seeds </Link></span><br />
-                  </div>
+                  <ul className='ul-style'>
+                    <li ><Link to="/grains">Grains</Link>
+                      <ul>
+                        <li><Link to="/greenmillet"><BiChevronRight></BiChevronRight>Green Millet </Link></li>
+                        <li><Link to="/yellowmaize"><BiChevronRight></BiChevronRight>Yellow Maize </Link></li>
+                        <li><Link to="/barly"><BiChevronRight></BiChevronRight>Barly</Link></li>
+                        <li><Link to="/sorgum"><BiChevronRight></BiChevronRight>Sorgum </Link></li>
+                        <li><Link to="/wheat"><BiChevronRight></BiChevronRight>Wheat </Link></li>
+                        <li><Link to="sesameseeds"><BiChevronRight></BiChevronRight>Sesame Seeds </Link></li>
+                      </ul>
+                    </li>
+                  </ul>
 
-                  <div>
-                    <p><Link to="/freshfruits">Fresh Fruits</Link></p>
-                    <span><Link to="/freshpomegrants"><BiChevronRight></BiChevronRight>Pomegrants </Link></span><br />
-                  </div>
+                  <ul className='ul-style'>
+                    <li ><Link to="/foddderseeds">Fodder Seeds</Link>
+                      <ul>
+                        <li><Link to="/alfalfagrassseeds"><BiChevronRight></BiChevronRight>Alfalfa Grass Seeds </Link></li>
+                        <li><Link to="/pipersudangrassseeds"><BiChevronRight></BiChevronRight>Piper Sudan Grass Seeds </Link></li>
+                      </ul>
+                    </li>
+                  </ul>
 
-                  <div>
-                    <p><Link to="/freshvegetable">Fresh Vegetables</Link></p>
-                    <span><Link to="/freshginger"><BiChevronRight></BiChevronRight>Fresh Ginger</Link></span><br />
-                    <span><Link to="freshredonion"><BiChevronRight></BiChevronRight>Fresh Red Onion</Link></span><br />
-                  </div>
+                  <ul className='ul-style'>
+                    <li ><Link to="/freshfruits">Fresh Fruits</Link>
+                      <ul>
+                        <li><Link to="/freshpomegrants"><BiChevronRight></BiChevronRight>Pomegrants </Link></li>
+                      </ul>
+                    </li>
+                  </ul>
 
-                  <div>
-                    <p><Link to="/indianspices">Indian Spices</Link></p>
-                    <span><Link to="/ajwainseeds"><BiChevronRight></BiChevronRight>Ajwain Seeds </Link></span><br />
-                    <span><Link to="/aselioseeds"><BiChevronRight></BiChevronRight>Aselio Seeds </Link></span><br />
-                    <span><Link to="/corianderseeds"><BiChevronRight></BiChevronRight>Coriander Seeds </Link></span><br />
-                    <span><Link to="cuminseeds"><BiChevronRight></BiChevronRight>Cumin Seeds </Link></span><br />
-                    <span><Link to="/fennelseeds"><BiChevronRight></BiChevronRight>Fennel seeds </Link></span><br />
-                    <span><Link to="/fenugreekseeds"><BiChevronRight></BiChevronRight>Fenugreek Seeds </Link></span><br />
-                    <span><Link to="/bayleaves"><BiChevronRight></BiChevronRight>Bay Leaves </Link></span><br />
-                    <span><Link to="/sennaleaves"><BiChevronRight></BiChevronRight>Senna Leaves  </Link></span><br />
-                    <span><Link to="/redchillipowder"><BiChevronRight></BiChevronRight>Red Chilli Powder </Link></span><br />
-                    <span><Link to="/turmericpowder"><BiChevronRight></BiChevronRight>Termeric Powder </Link></span><br />
-                  </div>
+                  <ul className='ul-style'>
+                    <li ><Link to="/indianrice" className=''>Indian Rice</Link>
+                      <ul>
+                        <li><Link to="/basmatirice"><BiChevronRight></BiChevronRight>Basmatirice</Link></li>
+                        <li><Link to="/nonbasmatirice"><BiChevronRight></BiChevronRight>Non Basmatirice</Link></li>
+                      </ul>
+                    </li>
+                  </ul>
+
+                  <ul className='ul-style'>
+                    <li ><Link to="/freshvegetable">Fresh Vegetables</Link>
+                      <ul>
+                        <li><Link to="/freshginger"><BiChevronRight></BiChevronRight>Fresh Ginger</Link></li>
+                        <li><Link to="freshredonion"><BiChevronRight></BiChevronRight>Fresh Red Onion</Link></li>
+                      </ul>
+                    </li>
+                  </ul>
+
+                  <ul className='ul-style'>
+                    <li ><Link to="/indianspices">Indian Spices</Link>
+                      <ul>
+                        <li><Link to="/ajwainseeds"><BiChevronRight></BiChevronRight>Ajwain Seeds </Link></li>
+                        <li><Link to="/aselioseeds"><BiChevronRight></BiChevronRight>Aselio Seeds </Link></li>
+                        <li><Link to="/corianderseeds"><BiChevronRight></BiChevronRight>Coriander Seeds </Link></li>
+                        <li><Link to="cuminseeds"><BiChevronRight></BiChevronRight>Cumin Seeds </Link></li>
+                        <li><Link to="/fennelseeds"><BiChevronRight></BiChevronRight>Fennel seeds </Link></li>
+                        <li><Link to="/fenugreekseeds"><BiChevronRight></BiChevronRight>Fenugreek Seeds </Link></li>
+                        <li><Link to="/bayleaves"><BiChevronRight></BiChevronRight>Bay Leaves </Link></li>
+                        <li><Link to="/sennaleaves"><BiChevronRight></BiChevronRight>Senna Leaves  </Link></li>
+                        <li><Link to="/redchillipowder"><BiChevronRight></BiChevronRight>Red Chilli Powder </Link></li>
+                        <li><Link to="/turmericpowder"><BiChevronRight></BiChevronRight>Termeric Powder </Link></li>
+                      </ul>
+                    </li>
+                  </ul>
 
                 </div>
               </div>
 
               <div className='border con-div'>
-                <div className='pt-2 ps-3 font-darkcyan fw-bold fs-6 prod-div'>
-                  <p><Link to="/products" className='font-darkcyan'>Contact Us</Link></p>
+                <div className='prod-div'>
+                  <h1 className='font-darkcyan'>Contact Us</h1>
                 </div>
 
-                <div className='px-md-3 contain'>
-                  <p className='font-darkcyan py-2 fw-bold'>Mukhi Overseas</p>
-                  <p className='pb-2'>B9 SHIROMANI COMPLEX OPP BARODA EXPRESS HIGHWAY CTM, Ghodasar, Ahmedabad, Gujarat - 380026, India </p>
-                  <p className='pb-2'><b>Mobile :</b> <span>+91-8866606069, +91-9328585464</span></p>
-                  <p className='pb-2'><b>Call Us :</b> <span className='font-darkcyan fw-bold fs-6'>08048784470</span></p>
-                  <span><b>E-mail:</b><a href="#" className='font-darkcyan fw-semibold mail-wrap'> mukhioverseas@gmail.com </a></span>
+                <div className='text-left'>
+                  <ul>
+                    <li>Mukhi Overseas</li>
+                    <li>B9 SHIROMANI COMPLEX OPP BARODA EXPRESS HIGHWAY CTM, Ghodasar, Ahmedabad, Gujarat - 380026, India </li>
+                    <li><b>Mobile:</b> <span>+91-8866606069, +91-9328585464</span></li>
+                    <li><b>Call Us :</b> <span className='font-darkcyan fw-bold fs-6'>08048784470</span></li>
+                    <li className='font-black'>
+                      <b>Email:</b>
+                      <Link href="#" className='mail-wrap'>mukhioverseas@gmail.com </Link>
+                    </li>
+                  </ul>
                 </div>
+
               </div>
 
             </div>
@@ -179,90 +219,128 @@ export default function AboutUs() {
           </div>
         </div>
 
-      </section>
+      </section >
 
       {/* --------------------------- End Description About us ------------------------------ */}
 
-      <section className='about-section px-2 disc-about-sec'>
+      <section className='about-section disc-about-sec' >
+        <div className='p-accord'>
+          <div className="accordion border mb-3">
+            <div className="bottom-border align-center"
+              onClick={() => setIsActive(!isActive)}
+              aria-controls="example-collapse-text"
+              aria-expanded={isActive}
+            >
+              <div className='product-name-title p1-about font-darkcyan'><h1 className='fw-semibold'><Link to="/products">Products</Link></h1></div>
+              <div className='arrow-plus'>{isActive ? '-' : '+'}</div>
+            </div>
+            <Collapse in={isActive}>
+              <div className='font-black link-col px-3 py-2'>
+                <ul className='ul-style'>
+                  <li ><Link to="/indianrice" className=''>Indian Rice</Link>
+                    <ul>
+                      <li><Link to="/basmatirice"><BiChevronRight></BiChevronRight>Basmatirice</Link></li>
+                      <li><Link to="/nonbasmatirice"><BiChevronRight></BiChevronRight>Non Basmatirice</Link></li>
+                    </ul>
+                  </li>
+                </ul>
 
-        <Accordion defaultActiveKey="0" className='p-accord'>
+                <ul className='ul-style'>
+                  <li ><Link to="/grains">Grains</Link>
+                    <ul>
+                      <li><Link to="/greenmillet"><BiChevronRight></BiChevronRight>Green Millet </Link></li>
+                      <li><Link to="/yellowmaize"><BiChevronRight></BiChevronRight>Yellow Maize </Link></li>
+                      <li><Link to="/barly"><BiChevronRight></BiChevronRight>Barly</Link></li>
+                      <li><Link to="/sorgum"><BiChevronRight></BiChevronRight>Sorgum </Link></li>
+                      <li><Link to="/wheat"><BiChevronRight></BiChevronRight>Wheat </Link></li>
+                      <li><Link to="sesameseeds"><BiChevronRight></BiChevronRight>Sesame Seeds </Link></li>
+                    </ul>
+                  </li>
+                </ul>
 
-          {/* --------------- products */}
-          <Accordion.Item eventKey="0">
-            <Accordion.Header>
-              <p><Link to="/products" className='font-darkcyan fw-bold fs-6'>Products</Link></p>
-            </Accordion.Header>
-            <Accordion.Body className='accord-p'>
-              <div className='px-3 pt-3 link-col '>
-                <div>
-                  <p><Link to="/indianrice">Indian Rice</Link></p>
-                  <span><Link to="/basmatirice"><BiChevronRight></BiChevronRight>Basmatirice</Link></span><br />
-                  <span><Link to="/nonbasmatirice"><BiChevronRight></BiChevronRight>Non Basmatirice</Link></span>
-                </div>
+                <ul className='ul-style'>
+                  <li ><Link to="/foddderseeds">Fodder Seeds</Link>
+                    <ul>
+                      <li><Link to="/alfalfagrassseeds"><BiChevronRight></BiChevronRight>Alfalfa Grass Seeds </Link></li>
+                      <li><Link to="/pipersudangrassseeds"><BiChevronRight></BiChevronRight>Piper Sudan Grass Seeds </Link></li>
+                    </ul>
+                  </li>
+                </ul>
 
-                <div>
-                  <p><Link to="/grains">Grains</Link></p>
-                  <span><Link to="/greenmillet"><BiChevronRight></BiChevronRight>Green Millet </Link></span><br />
-                  <span><Link to="/yellowmaize"><BiChevronRight></BiChevronRight>Yellow Maize </Link></span><br />
-                  <span><Link to="/barly"><BiChevronRight></BiChevronRight>Barly</Link></span><br />
-                  <span><Link to="/sorgum"><BiChevronRight></BiChevronRight>Sorgum </Link></span><br />
-                  <span><Link to="/wheat"><BiChevronRight></BiChevronRight>Wheat </Link></span><br />
-                  <span><Link to="sesameseeds"><BiChevronRight></BiChevronRight>Sesame Seeds </Link></span><br />
-                </div>
+                <ul className='ul-style'>
+                  <li ><Link to="/freshfruits">Fresh Fruits</Link>
+                    <ul>
+                      <li><Link to="/freshpomegrants"><BiChevronRight></BiChevronRight>Pomegrants </Link></li>
+                    </ul>
+                  </li>
+                </ul>
 
-                <div>
-                  <p><Link to="/foddderseeds">Fodder Seeds</Link></p>
-                  <span><Link to="/alfalfagrassseeds"><BiChevronRight></BiChevronRight>Alfalfa Grass Seeds </Link></span><br />
-                  <span><Link to="/pipersudangrassseeds"><BiChevronRight></BiChevronRight>Piper Sudan Grass Seeds </Link></span><br />
-                </div>
+                <ul className='ul-style'>
+                  <li ><Link to="/indianrice" className=''>Indian Rice</Link>
+                    <ul>
+                      <li><Link to="/basmatirice"><BiChevronRight></BiChevronRight>Basmatirice</Link></li>
+                      <li><Link to="/nonbasmatirice"><BiChevronRight></BiChevronRight>Non Basmatirice</Link></li>
+                    </ul>
+                  </li>
+                </ul>
 
-                <div>
-                  <p><Link to="/freshfruits">Fresh Fruits</Link></p>
-                  <span><Link to="/freshpomegrants"><BiChevronRight></BiChevronRight>Pomegrants </Link></span><br />
-                </div>
+                <ul className='ul-style'>
+                  <li ><Link to="/freshvegetable">Fresh Vegetables</Link>
+                    <ul>
+                      <li><Link to="/freshginger"><BiChevronRight></BiChevronRight>Fresh Ginger</Link></li>
+                      <li><Link to="freshredonion"><BiChevronRight></BiChevronRight>Fresh Red Onion</Link></li>
+                    </ul>
+                  </li>
+                </ul>
 
-                <div>
-                  <p><Link to="/freshvegetable">Fresh Vegetables</Link></p>
-                  <span><Link to="/freshginger"><BiChevronRight></BiChevronRight>Fresh Ginger</Link></span><br />
-                  <span><Link to="freshredonion"><BiChevronRight></BiChevronRight>Fresh Red Onion</Link></span><br />
-                </div>
+                <ul className='ul-style'>
+                  <li ><Link to="/indianspices">Indian Spices</Link>
+                    <ul>
+                      <li><Link to="/ajwainseeds"><BiChevronRight></BiChevronRight>Ajwain Seeds </Link></li>
+                      <li><Link to="/aselioseeds"><BiChevronRight></BiChevronRight>Aselio Seeds </Link></li>
+                      <li><Link to="/corianderseeds"><BiChevronRight></BiChevronRight>Coriander Seeds </Link></li>
+                      <li><Link to="cuminseeds"><BiChevronRight></BiChevronRight>Cumin Seeds </Link></li>
+                      <li><Link to="/fennelseeds"><BiChevronRight></BiChevronRight>Fennel seeds </Link></li>
+                      <li><Link to="/fenugreekseeds"><BiChevronRight></BiChevronRight>Fenugreek Seeds </Link></li>
+                      <li><Link to="/bayleaves"><BiChevronRight></BiChevronRight>Bay Leaves </Link></li>
+                      <li><Link to="/sennaleaves"><BiChevronRight></BiChevronRight>Senna Leaves  </Link></li>
+                      <li><Link to="/redchillipowder"><BiChevronRight></BiChevronRight>Red Chilli Powder </Link></li>
+                      <li><Link to="/turmericpowder"><BiChevronRight></BiChevronRight>Termeric Powder </Link></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </Collapse>
+          </div>
 
-                <div>
-                  <p><Link to="/indianspices">Indian Spices</Link></p>
-                  <span><Link to="/ajwainseeds"><BiChevronRight></BiChevronRight>Ajwain Seeds </Link></span><br />
-                  <span><Link to="/aselioseeds"><BiChevronRight></BiChevronRight>Aselio Seeds </Link></span><br />
-                  <span><Link to="/corianderseeds"><BiChevronRight></BiChevronRight>Coriander Seeds </Link></span><br />
-                  <span><Link to="cuminseeds"><BiChevronRight></BiChevronRight>Cumin Seeds </Link></span><br />
-                  <span><Link to="/fennelseeds"><BiChevronRight></BiChevronRight>Fennel seeds </Link></span><br />
-                  <span><Link to="/fenugreekseeds"><BiChevronRight></BiChevronRight>Fenugreek Seeds </Link></span><br />
-                  <span><Link to="/bayleaves"><BiChevronRight></BiChevronRight>Bay Leaves </Link></span><br />
-                  <span><Link to="/sennaleaves"><BiChevronRight></BiChevronRight>Senna Leaves  </Link></span><br />
-                  <span><Link to="/redchillipowder"><BiChevronRight></BiChevronRight>Red Chilli Powder </Link></span><br />
-                  <span><Link to="/turmericpowder"><BiChevronRight></BiChevronRight>Termeric Powder </Link></span><br />
-                </div>
+          <div className="accordion border">
+            <div className="bottom-border align-center"
+              onClick={() => setIsLink(!isLink)}
+              aria-controls="example-collapse-text"
+              aria-expanded={isLink}
+            >
+              <div className='product-name-title'><h1 className='fw-semibold'>Contact Us</h1></div>
+              <div className='arrow-plus'>{isLink ? '-' : '+'}</div>
+            </div>
+            <Collapse in={isLink}>
+              <div className='example-collapse-text con-div px-3 py-2'>
+                <ul>
+                  <li>Mukhi Overseas</li>
+                  <li>B9 SHIROMANI COMPLEX OPP BARODA EXPRESS HIGHWAY CTM, Ghodasar, Ahmedabad, Gujarat - 380026, India </li>
+                  <li><b>Mobile:</b> <span>+91-8866606069, +91-9328585464</span></li>
+                  <li><b>Call Us :</b> <span className='font-darkcyan fw-bold fs-6'>08048784470</span></li>
+                  <li className='font-black'>
+                    <b>Email: </b>
+                    <Link href="#" className='mail-wrap'>mukhioverseas@gmail.com </Link>
+                  </li>
+                </ul>
 
               </div>
-            </Accordion.Body>
-          </Accordion.Item>
+            </Collapse>
+          </div>
 
-          {/* --------------- contact us */}
-          <Accordion.Item eventKey="1">
-            <Accordion.Header>
-              <p><Link to="/products" className='font-darkcyan font-darkcyan fw-bold fs-6'>Contact Us</Link></p>
-            </Accordion.Header>
-            <Accordion.Body className='accord-c'>
-              <div className='px-md-3 contain'>
-                <p className='font-darkcyan py-2 fw-bold'>Mukhi Overseas</p>
-                <p className='pb-2'>B9 SHIROMANI COMPLEX OPP BARODA EXPRESS HIGHWAY CTM, Ghodasar, Ahmedabad, Gujarat - 380026, India </p>
-                <p className='pb-2'><b>Mobile :</b> <span>+91-8866606069, +91-9328585464</span></p>
-                <p className='pb-2'><b>Call Us :</b> <span className='font-darkcyan fw-bold fs-6'>08048784470</span></p>
-                <span><b>E-mail:</b><a href="#" className='font-darkcyan fw-semibold mail-wrap'> mukhioverseas@gmail.com </a></span>
-              </div>
-            </Accordion.Body>
-          </Accordion.Item>
-        </Accordion>
-
-      </section>
+        </div>
+      </section >
 
       <MIniFooter />
     </>
