@@ -20,141 +20,142 @@ export default function Navbar() {
   return (
     <>
       <Affix>
-        <header className='full-pad container-fluid'>
+        <header>
+          <div className='header'>
 
-          {/* --------------------------------  offcanvas ------------------------- */}
-
-          <Button type='' variant="" className='off-btn fw-bold canvas ms-0 ps-0' onClick={handleShow}>
-            <HiBars3CenterLeft></HiBars3CenterLeft>
-          </Button>
-          <Offcanvas show={show} onHide={handleClose} className="w-5">
-            <Offcanvas.Header closeButton>
-            </Offcanvas.Header>
-            <Offcanvas.Body className='m-0 p-0'>
-              <nav class="canva">
-                <ul>
-                  <li className='nav-item'><NavLink to="/" >Home</NavLink></li>
-                  <li><NavLink to="/about" >About Us</NavLink></li>
-                  <li><Link >Products <span><FiChevronDown className=''></FiChevronDown></span></Link>
+            <div>
+              {/* --------------------------------start  offcanvas ------------------------- */}
+              <button className='off-canvas-btn p-0 m-0' onClick={handleShow}>
+                <HiBars3CenterLeft></HiBars3CenterLeft>
+              </button>
+              <Offcanvas show={show} onHide={handleClose} className="w-5">
+                <Offcanvas.Header closeButton>
+                </Offcanvas.Header>
+                <Offcanvas.Body className='m-0 p-0'>
+                  <nav class="canva">
                     <ul>
-                      <li><Link to="">Indian Rice<BiChevronRight></BiChevronRight></Link>
+                      <li className='nav-item'><NavLink to="/" >Home</NavLink></li>
+                      <li><NavLink to="/about" >About Us</NavLink></li>
+                      <li><Link >Products <span><FiChevronDown className=''></FiChevronDown></span></Link>
                         <ul>
-                          <li><Link to="/basmati" >Basmati Rice</Link></li>
-                          <li><Link to="/nonbasmati" >Non Basmati Rice</Link></li>
+                          <li><Link to="">Indian Rice<BiChevronRight></BiChevronRight></Link>
+                            <ul>
+                              <li><Link to="/basmati" >Basmati Rice</Link></li>
+                              <li><Link to="/nonbasmati" >Non Basmati Rice</Link></li>
+                            </ul>
+                          </li>
+                          <li><Link >Grains<BiChevronRight></BiChevronRight> </Link>
+                            <ul>
+                              <li><Link to="/greenmillet">Green Millet </Link></li>
+                              <li><Link to="/yellowmaize">Yellow Maize </Link></li>
+                              <li><Link to="/barly">Barly</Link></li>
+                              <li><Link to="/sorgum">Sorgum </Link></li>
+                              <li><Link to="/wheat">Wheat </Link></li>
+                              <li><Link to="sesameseeds">Sesame Seeds </Link></li>
+                            </ul>
+                          </li>
+                          <li><Link>Fodder Seeds<BiChevronRight></BiChevronRight></Link>
+                            <ul>
+                              <li><Link to="/alfalfagrassseeds">Alfalfa Grass Seeds </Link></li>
+                              <li><Link to="/pipersudangrassseeds">Piper Sudan Grass Seeds </Link></li>
+                            </ul>
+                          </li>
+                          <li><Link to="" >Fresh Fruits<BiChevronRight></BiChevronRight></Link>
+                            <ul>
+                              <li><Link to="/freshpomegrants">Pomegrants </Link></li>
+                            </ul>
+                          </li>
+                          <li><Link to="" >Fresh Vegetables<BiChevronRight></BiChevronRight></Link>
+                            <ul>
+                              <li><Link to="/freshginger">Fresh Ginger</Link></li>
+                              <li><Link to="freshredonion">Fresh Red Onion</Link></li>
+                            </ul>
+                          </li>
+                          <li><Link>Indian Spices<BiChevronRight></BiChevronRight></Link>
+                            <ul>
+                              <li><Link to="/ajwainseeds">Ajwain Seeds </Link></li>
+                              <li><Link to="/aselioseeds">Aselio Seeds </Link></li>
+                              <li><Link to="/corianderseeds">Coriander Seeds </Link></li>
+                              <li><Link to="cuminseeds">Cumin Seeds </Link></li>
+                              <li><Link to="/fennelseeds">Fennel seeds </Link></li>
+                              <li><Link to="/bayleaves">Bay Leaves </Link></li>
+                              <li><Link to="/sennaleaves">Senna Leaves  </Link></li>
+                              <li><Link to="/redchillipowder">Red Chilli Powder </Link></li>
+                              <li><Link to="/turmericpowder">Termeric Powder </Link></li>
+                            </ul>
+                          </li>
                         </ul>
                       </li>
-                      <li><Link >Grains<BiChevronRight></BiChevronRight> </Link>
-                        <ul>
-                          <li><Link to="/greenmillet">Green Millet </Link></li>
-                          <li><Link to="/yellowmaize">Yellow Maize </Link></li>
-                          <li><Link to="/barly">Barly</Link></li>
-                          <li><Link to="/sorgum">Sorgum </Link></li>
-                          <li><Link to="/wheat">Wheat </Link></li>
-                          <li><Link to="sesameseeds">Sesame Seeds </Link></li>
-                        </ul>
-                      </li>
-                      <li><Link>Fodder Seeds<BiChevronRight></BiChevronRight></Link>
-                        <ul>
-                          <li><Link to="/alfalfagrassseeds">Alfalfa Grass Seeds </Link></li>
-                          <li><Link to="/pipersudangrassseeds">Piper Sudan Grass Seeds </Link></li>
-                        </ul>
-                      </li>
-                      <li><Link to="" >Fresh Fruits<BiChevronRight></BiChevronRight></Link>
-                        <ul>
-                          <li><Link to="/freshpomegrants">Pomegrants </Link></li>
-                        </ul>
-                      </li>
-                      <li><Link to="" >Fresh Vegetables<BiChevronRight></BiChevronRight></Link>
-                        <ul>
-                          <li><Link to="/freshginger">Fresh Ginger</Link></li>
-                          <li><Link to="freshredonion">Fresh Red Onion</Link></li>
-                        </ul>
-                      </li>
-                      <li><Link>Indian Spices<BiChevronRight></BiChevronRight></Link>
-                        <ul>
-                          <li><Link to="/ajwainseeds">Ajwain Seeds </Link></li>
-                          <li><Link to="/aselioseeds">Aselio Seeds </Link></li>
-                          <li><Link to="/corianderseeds">Coriander Seeds </Link></li>
-                          <li><Link to="cuminseeds">Cumin Seeds </Link></li>
-                          <li><Link to="/fennelseeds">Fennel seeds </Link></li>
-                          <li><Link to="/bayleaves">Bay Leaves </Link></li>
-                        <li><Link to="/sennaleaves">Senna Leaves  </Link></li>
-                        <li><Link to="/redchillipowder">Red Chilli Powder </Link></li>
-                        <li><Link to="/turmericpowder">Termeric Powder </Link></li>
-                        </ul>
-                      </li>
-                    </ul>
-                  </li>
 
-                  <li><NavLink to="/contact" >Contact Us</NavLink></li>
-                </ul>
-              </nav>
-            </Offcanvas.Body>
-          </Offcanvas>
-
-          {/* ------------------------------------------------ */}
-
-          <Link to="/" class="logo">
-            <img src={require('../img/asset 1.png')} alt="" />
-          </Link>
-          <nav class="navbar" data-spy="affix" data-offset-top="197">
-            <ul className='m-0'>
-              <li className=''><NavLink to="/" >home</NavLink></li>
-              <li><NavLink to="/about" >about Us</NavLink></li>
-              <li><Link to="/" >Product <span><FiChevronDown></FiChevronDown></span></Link>
-                <ul>
-                  <li><Link to="">Indian Rice<BiChevronRight></BiChevronRight></Link>
-                    <ul>
-                      <li><Link to="/basmati" >Basmati Rice</Link></li>
-                      <li><Link to="/nonbasmati" >Non Basmati Rice</Link></li>
+                      <li><NavLink to="/contact" >Contact Us</NavLink></li>
                     </ul>
-                  </li>
-                  <li><Link to="" >Grains<BiChevronRight></BiChevronRight> </Link>
-                    <ul>
-                      <li><Link to="/greenmillet">Green Millet </Link></li>
-                      <li><Link to="/yellowmaize">Yellow Maize </Link></li>
-                      <li><Link to="/barly">Barly</Link></li>
-                      <li><Link to="/sorgum">Sorgum </Link></li>
-                      <li><Link to="/wheat">Wheat </Link></li>
-                      <li className='sub-menu-btn'><Link>View All</Link></li>
-                    </ul>
-                  </li>
-                  <li><Link to="" >Fodder Seeds<BiChevronRight></BiChevronRight></Link>
-                    <ul>
-                      <li><Link to="/alfalfagrassseeds">Alfalfa Grass Seeds </Link></li>
-                      <li><Link to="/pipersudangrassseeds">Piper Sudan Grass Seeds </Link></li>
-                    </ul>
-                  </li>
-                  <li><Link to="" >Fresh Fruits<BiChevronRight></BiChevronRight></Link>
-                    <ul>
-                      <li><Link to="/freshpomegrants">Pomegrants </Link></li>
-                    </ul>
-                  </li>
-                  <li><Link to="" >Fresh Vegetables<BiChevronRight></BiChevronRight></Link>
-                    <ul>
-                      <li><Link to="/freshginger">Fresh Ginger</Link></li>
-                      <li><Link to="freshredonion">Fresh Red Onion</Link></li>
-                    </ul>
-                  </li>
-                  <li><Link to="" >Indian Spices<BiChevronRight></BiChevronRight></Link>
-                    <ul>
-                      <li><Link to="/ajwainseeds">Ajwain Seeds </Link></li>
-                      <li><Link to="/aselioseeds">Aselio Seeds </Link></li>
-                      <li><Link to="/corianderseeds">Coriander Seeds </Link></li>
-                      <li><Link to="cuminseeds">Cumin Seeds </Link></li>
-                      <li><Link to="/fennelseeds">Fennel seeds </Link></li>
-                      <li className='sub-menu-btn '><Link>View All</Link></li>
-                    </ul>
-                  </li>
-                </ul>
-              </li>
+                  </nav>
+                </Offcanvas.Body>
+              </Offcanvas>
+              {/* --------------------------------End offcanvas ------------------------- */}
 
-              <li><NavLink to="/contact" >Contact Us</NavLink></li>
-            </ul>
-          </nav>
+              <Link to="/" class="logo">
+                <img src={require('../img/asset 1.png')} alt="" />
+              </Link>
+            </div>
 
+            <nav class="navbar" data-spy="affix" data-offset-top="197">
+              <ul className='m-0'>
+                <li className=''><NavLink to="/" >home</NavLink></li>
+                <li><NavLink to="/about" >about Us</NavLink></li>
+                <li><Link to="/" >Product <span><FiChevronDown></FiChevronDown></span></Link>
+                  <ul>
+                    <li><Link to="">Indian Rice<BiChevronRight></BiChevronRight></Link>
+                      <ul>
+                        <li><Link to="/basmati" >Basmati Rice</Link></li>
+                        <li><Link to="/nonbasmati" >Non Basmati Rice</Link></li>
+                      </ul>
+                    </li>
+                    <li><Link to="" >Grains<BiChevronRight></BiChevronRight> </Link>
+                      <ul>
+                        <li><Link to="/greenmillet">Green Millet </Link></li>
+                        <li><Link to="/yellowmaize">Yellow Maize </Link></li>
+                        <li><Link to="/barly">Barly</Link></li>
+                        <li><Link to="/sorgum">Sorgum </Link></li>
+                        <li><Link to="/wheat">Wheat </Link></li>
+                        <li className='sub-menu-btn'><Link>View All</Link></li>
+                      </ul>
+                    </li>
+                    <li><Link to="" >Fodder Seeds<BiChevronRight></BiChevronRight></Link>
+                      <ul>
+                        <li><Link to="/alfalfagrassseeds">Alfalfa Grass Seeds </Link></li>
+                        <li><Link to="/pipersudangrassseeds">Piper Sudan Grass Seeds </Link></li>
+                      </ul>
+                    </li>
+                    <li><Link to="" >Fresh Fruits<BiChevronRight></BiChevronRight></Link>
+                      <ul>
+                        <li><Link to="/freshpomegrants">Pomegrants </Link></li>
+                      </ul>
+                    </li>
+                    <li><Link to="" >Fresh Vegetables<BiChevronRight></BiChevronRight></Link>
+                      <ul>
+                        <li><Link to="/freshginger">Fresh Ginger</Link></li>
+                        <li><Link to="freshredonion">Fresh Red Onion</Link></li>
+                      </ul>
+                    </li>
+                    <li><Link to="" >Indian Spices<BiChevronRight></BiChevronRight></Link>
+                      <ul>
+                        <li><Link to="/ajwainseeds">Ajwain Seeds </Link></li>
+                        <li><Link to="/aselioseeds">Aselio Seeds </Link></li>
+                        <li><Link to="/corianderseeds">Coriander Seeds </Link></li>
+                        <li><Link to="cuminseeds">Cumin Seeds </Link></li>
+                        <li><Link to="/fennelseeds">Fennel seeds </Link></li>
+                        <li className='sub-menu-btn '><Link>View All</Link></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
 
+                <li><NavLink to="/contact" >Contact Us</NavLink></li>
+              </ul>
+            </nav>
 
+          </div>
         </header>
       </Affix>
     </>

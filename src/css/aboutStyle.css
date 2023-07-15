@@ -8,7 +8,7 @@
     padding: 10px 180px;
 }
 
-.top-line .f-div  {
+.top-line .f-div {
     color: rgb(209, 218, 225);
 }
 
@@ -27,12 +27,18 @@
 }
 
 .top-line .sms-btn,
-.contact-sec .btn-send {
+#contact-sec .btn-send {
     background-color: var(--color-cyan);
 }
 
+#contact-sec .btn-send {
+    border: none;
+    color: white;
+    padding: 10px 20px !important;
+}
+
 .modal-footers button:hover,
-.contact-sec .btn-send:hover {
+#contact-sec .btn-send:hover {
     background-color: var(--color-nevy-blue);
 }
 
@@ -45,13 +51,14 @@
     background-color: white;
 }
 
-.body-modal{
+.body-modal {
     position: relative;
     width: 100%;
     max-width: 340px;
     border-radius: 20px;
-    padding: 22px 10px ;
+    padding: 22px 10px;
 }
+
 .close-btn {
     position: absolute;
     top: -15px;
@@ -65,14 +72,17 @@
     border-radius: 50%;
     border: solid 2px white;
 }
+
 .close-btn:hover {
     background-color: white;
-    color:var(--color-dark-gray);
+    color: var(--color-dark-gray);
     border: 2px solid var(--color-dark-gray);
 }
-.btn-2 div div{
+
+.btn-2 div div {
     margin: -1px !important;
 }
+
 .top-line .btn1 div div select {
     color: rgb(131, 133, 138);
 }
@@ -82,7 +92,7 @@
 .top-line textarea {
     border: none;
     outline: none;
-    
+
 }
 
 .top-line .e-icon {
@@ -91,17 +101,17 @@
     color: rgb(101, 97, 97);
 }
 
-.modal-footers button,
-.contact-sec .btn-send {
+.modal-footers button {
     padding: 15px 19px;
     color: rgb(228, 228, 228);
     border: none;
 }
 
-.bg-gray{
+.bg-gray {
     background-color: rgb(206, 208, 209);
 }
-.title-modal h1{
+
+.title-modal h1 {
     color: rgb(96, 98, 99);
     font-weight: 600;
     height: 40px;
@@ -255,77 +265,101 @@
 }
 
 /* --------------------------------------- Contact US */
-.contact-sec {
-    padding: 20px 170px 20px 170px;
+#contact-sec {
+    padding: 25px 170px 20px 170px;
 }
 
-.contact-sec,
-.contact-sec .contact a {
-    font-size: 14.3px;
+#contact-sec ,
+#contact-sec .contact a {
+    font-size: 14.5px;
     font-weight: 500;
     text-decoration: none;
     color: inherit;
+    line-height: 19.5px;
 }
 
-.contact-sec .contact p {
+
+#contact-sec .contact p {
     display: flex;
     margin-bottom: 20px;
 }
-.ms{
+
+.ms {
     margin-left: 31px;
 }
-.contact-sec .cont-icon {
+.ms h1{
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-decoration: solid 1px black;
+}   
+#contact-sec .cont-icon {
     margin-right: 14px;
     font-size: 17px;
 }
-.contact-sec .cont-bg h1{
+
+#contact-sec .cont-bg h1 {
     font-size: 20px;
     font-weight: 600;
 }
-.contact-sec .cont-bg {
+
+#contact-sec .cont-bg {
     background-color: rgba(197, 201, 202, 0.3);
 }
+#contact-sec .cont-bg .row .row-2 {
+    flex-direction: column;
+}
 
-.contact-sec .pad {
+#contact-sec .cont-bg .col1 , #contact-sec .cont-bg .col2{
+    width: 48%;
+}
+
+#contact-sec .pad {
     padding: 35px 45px 40px 48px;
 }
 
-.contact-sec .row input,
-.contact-sec textarea,
-.contact-sec select {
-    padding: 12px 3px;
+#contact-sec .row input,
+#contact-sec textarea,
+#contact-sec select {
+    padding: 10px 3px;
 }
-.contact-sec .cont-bg .row div {
+
+#contact-sec .cont-bg .row div {
     display: flex;
     background-color: white;
     margin: 5px 0px;
 }
-.contact-sec .div-border {
+
+#contact-sec .div-border {
+    padding: 0 0 0 5px;
     border: 1px solid rgba(195, 190, 190, 0.8);
 }
-.contact-sec .div-border input,
-.contact-sec .div-border textarea,
-.contact-sec .div-border select{
+
+#contact-sec .div-border input,
+#contact-sec .div-border textarea,
+#contact-sec .div-border select {
     width: 100%;
     border: none;
     outline: none;
-} 
-.contact-sec .div-border input::placeholder,
-.contact-sec .div-border textarea::placeholder,
-.contact-sec .div-border select{
+}
+
+#contact-sec .div-border input::placeholder,
+#contact-sec .div-border textarea::placeholder,
+#contact-sec .div-border select {
     font-size: 13px;
     color: var(--color-light-gray);
-} 
-
-.contact-sec .div-border span {
-    color: red;
-    font-size: 25px;
-    font-weight: 100;
 }
 
-.theme-bg{
+#contact-sec .div-border span {
+    color: rgb(217, 31, 31);
+    font-size: 19.5px;
+    font-weight: 400;
+}
+
+.theme-bg {
     background-color: var(--color-cyan);
 }
+
 /* -----------------------sliders */
 .sli .pad-div {
     width: 300px;
@@ -339,23 +373,35 @@
 
 
 /* ---------------------------------------------- Mini Footer */
-.mini-footer .general-link a {
+#mini-footer .general-link a {
     padding-left: 8px;
     padding-right: 8px;
     font-weight: bold;
 }
 
-.mini-footer .general-link {
+#mini-footer .general-link {
     font-weight: bold;
     line-height: 19.5px;
-    display: block;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
+    /* display: block; */
+    /* margin-block-start: 1em; */
+    /* margin-block-end: 1em; */
+    /* margin-inline-start: 0px; */
+    /* margin-inline-end: 0px; */
     overflow-wrap: break-word;
 }
+#mini-footer .row .row-3 {
+    flex-direction: column;
+}
 
+#mini-footer .row-3 .col1 , #mini-footer .row-3 .col2{
+    width: 50% ;
+}
+#mini-footer .t-center {
+    font-size: 11.7px;
+}
+#mini-footer.footer-line{
+    border: 1px dashed white;
+}
 .error {
     color: red;
 }

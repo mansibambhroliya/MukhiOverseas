@@ -225,6 +225,7 @@ export default function AboutUs() {
 
       <section className='about-section disc-about-sec' >
         <div className='p-accord'>
+          
           <div className="accordion border mb-3">
             <div className="bottom-border align-center"
               onClick={() => setIsActive(!isActive)}
@@ -235,7 +236,7 @@ export default function AboutUs() {
               <div className='arrow-plus'>{isActive ? '-' : '+'}</div>
             </div>
             <Collapse in={isActive}>
-              <div className='font-black link-col px-3 py-2'>
+              <div className='example-collapse-text font-black link-col px-3 py-2'>
                 <ul className='ul-style'>
                   <li ><Link to="/indianrice" className=''>Indian Rice</Link>
                     <ul>

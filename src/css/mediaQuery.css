@@ -3,17 +3,21 @@
         padding-left: 600px !important;
         padding-right: 600px !important;
     }
+
     .banner .one {
         display: none;
     }
+
     .top-line .top-line-space {
         padding: 10px 0 !important;
     }
-    .about-sec .about-space{
+
+    .about-sec .about-space {
         padding: 10px 0 !important;
     }
-    .contact-sec {
-        padding: 0 !important;
+
+    #contact-sec {
+        /* padding: 0 !important; */
     }
 }
 
@@ -22,62 +26,86 @@
         border-left: 1440px solid transparent !important;
     }
 }
+
 @media (min-width:1255px) {
-    header{
+    .header {
         padding: 0 170px !important;
     }
 }
+
 @media (max-width:1255px) {
-    header {
+    .header {
         padding: 0 20px !important;
     }
 
-    .top-line .top-line-space , .about-sec .about-space {
+    .top-line .top-line-space,
+    .about-sec .about-space {
         padding: 10px 20px !important;
-    } 
+    }
 
     .disc-about-sec {
         padding: 10px 30px !important;
     }
 
     .footer-bg {
-        padding: 30px 30px 15px 30px !important;
+        padding: 15px 30px 15px 30px !important;
     }
+
     .spacer-p-name {
-            padding: 45px 30px!important;
+        padding: 45px 30px !important;
     }
-    .contact-sec {
-        padding: 20px 30px !important;
+
+    #contact-sec {
+        padding: 22px 40px !important;
     }
 }
 
 @media (max-width:1200px) {
-    
+
     .featured-main .img-w {
         width: 215px !important;
-        height:  215px !important;
+        height: 215px !important;
     }
+
     .featured-main .f4-img img {
-        top: 3px !important;        
+        top: 3px !important;
         width: 210px !important;
         height: 220px !important;
     }
-    .featured-main .f5-img .sub-img img ,.featured-main .f6-img .sub-img img{
+
+    .featured-main .f5-img .sub-img img,
+    .featured-main .f6-img .sub-img img {
         height: 150px !important;
         width: 215px !important;
         top: 30px !important;
     }
+
     .fruit-div {
         padding: 2% !important;
     }
 }
 
-
-@media  (min-width:864px) and (max-width:1039px) , (min-width:750px) and (max-width:840px) { 
-    .range-sec {
-        /* padding : 50px 40px !important; */
+@media (min-width:767px) and (max-width:991px) {
+    .end-justify {
+        display: flex;
+        justify-content: end !important;
     }
 
+    .start-justify {
+        display: flex;
+        justify-content: start !important;
+    }
+
+    .container1 {
+        grid-gap: 15px !important;
+    }
+
+}
+
+@media (max-width:767px) {
+    .container1 {
+        grid-gap: 10px 15px !important;
+    }
 }
 
 @media (max-width:1024px) {
@@ -85,7 +113,7 @@
         padding: 30px 18px !important;
     }
 
-    header {
+    .header {
         padding: 0 12px !important;
     }
 
@@ -111,23 +139,22 @@
         position: relative;
     }
 
-    .banner .cross {
+    /* .banner .cross {
         margin-top: -120px;
         top: 0;
         left: 0;
-    }
+    } */
 
-    .banner {
+    /* .banner {
         margin-bottom: 95px;
     }
-    
+     */
 }
 
 /* ------------------------------------------------ */
 @media (max-width:978px) {
 
-    header .logo img {
-        width: 238px !important;
+    .header .logo img {
         padding: 0px !important;
     }
 }
@@ -138,7 +165,7 @@
         display: none;
     }
 
-    header {
+    .header {
         justify-content: flex-start !important;
     }
 
@@ -153,28 +180,26 @@
 /* ------------------------------------------------ */
 @media(max-width:768px) {
     .footer-bg {
-        padding: 20px 30px;
+        padding: 15px 30px;
     }
 
     .featured-main {
-        padding:40px 25px 0px 25px !important;
+        padding: 40px 25px 0px 25px !important;
     }
 
     .spacer-p-name {
         padding: 40px 20px !important;
     }
-    .pad-0{
+
+    .pad-0 {
         padding: 0px 5px;
     }
-    .contact-sec {
-        padding: 0px !important;
+
+    #contact-sec {
+        padding: 23px 15px 0 15px !important;
         margin: 0;
     }
-    .contact-sec .pad {
-        padding: 30px 20px !important;
-        margin-bottom: 15px;
-        margin-top: 15px;
-    }
+
     .banner .box {
         display: none;
     }
@@ -195,13 +220,9 @@
         font-size: 14px !important;
     }
 
-    .top-line {
-        display: none;
-    }
-    
 }
 
-@media(min-width:768px) {    
+@media(min-width:768px) {
     .about-section {
         display: none;
     }
@@ -210,39 +231,84 @@
 @media(max-width:767px) {
     .a2-font {
         display: none;
-    } 
+    }
 }
 
 @media(min-width:678px) {
-    section .accord-p , .footer-bg .accordion , .hide-fb-icon{
+
+    section .accord-p,
+    .footer-bg .accordion,
+    .hide-fb-icon {
         display: none;
     }
 }
 
 @media(max-width:678px) {
-    .pname-div , .footer-bg .hide-footer-row{
+
+    .pname-div,
+    .footer-bg .hide-footer-row {
         display: none;
     }
 }
 
 /* ------------------------------------------------ */
 @media(max-width:576px) {
-    .t-center{
-        text-align: center !important;
-        margin-bottom: 10px;
+    #mini-footer .t-center {
+        margin-bottom: 15px;
     }
-}
-@media(max-width:426px) {
-    header {
-        padding: 0px !important;
-    }
-    
 }
 
-@media(max-width:320px) {
-    header .logo img {
-        width: 200px !important;
+@media(max-width:426px) {
+    .header {
+        padding: 0px !important;
     }
-    
+
 }
- 
+
+
+/* -------------------------------------------------------------------------------------------------- */
+@media(max-width:641px) and (max-width:1150px) {
+    #contact-sec {
+        padding: 22px 0px !important;
+    }
+}
+
+@media(max-width:992px) {
+    .top-line {
+        display: none;
+    }
+}
+
+@media (min-width:641px) {
+    .row .row-1 {
+        flex-direction: column;
+    }
+
+    .col1 {
+        width: 25%;
+    }
+
+    .col2 {
+        width: 75%;
+    }
+}
+
+@media (max-width:641px) {
+
+    #contact-sec .pad {
+        padding: 30px 20px !important;
+        margin-bottom: 16px;
+    }
+}
+
+@media (max-width:481px) {
+
+    #contact-sec .cont-bg .col1,
+    #mini-footer .row-3 .col1  ,
+    #contact-sec .cont-bg .col2 ,
+    #mini-footer .row-3 .col2
+    {
+        width: 100% !important;
+    }
+
+}

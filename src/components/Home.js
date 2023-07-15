@@ -45,7 +45,8 @@ export default function Home() {
 
     <>
 
-      <Navbar /><Gotoup />
+      <Navbar />
+      <Gotoup />
       {/*---------------------------- Start Banner ----------------------- */}
 
       <div className='banner'>
@@ -148,12 +149,12 @@ export default function Home() {
             <h1 className='font-cyan text-center prod-range'>Product <span className='text-black'>Range</span></h1>
           </div>
 
-          <div className='range-section d-flex justify-content-around '>
-            <div className="container1 ">
+          <div className='range-section d-flex justify-content-around container'>
+            <div className="container1 container">
 
-              <div className="d-flex justify-content-center">
+              <div className="justify-center end-justify">
                 <div className='range-div-w border'>
-                  <div className='r1-img range-img-w div-hover '>
+                  <div className='r1-img range-img-w div-hover'>
                     <div className="bg-blur"></div>
                     <Link to="/pomegranate" className='sub-img'>
                       <img src={require('../img/asset 37.jpeg')} alt="" title='Piper Sudan Grass Seed' />
@@ -165,7 +166,7 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="justify-center">
+              <div className="justify-center start-justify">
                 <div className='range-div-w border'>
                   <div className='r2-img range-img-w div-hover'>
                     <div className="bg-blur"></div>
@@ -179,7 +180,7 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="justify-center">
+              <div className="justify-center end-justify">
                 <div className='range-div-w border'>
                   <div className='r3-img range-img-w div-hover'>
                     <div className="bg-blur"></div>
@@ -193,7 +194,7 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="justify-center">
+              <div className="justify-center start-justify">
                 <div className='range-div-w border'>
                   <div className='r4-img range-img-w div-hover'>
                     <div className="bg-blur"></div>
@@ -208,7 +209,7 @@ export default function Home() {
               </div>
 
 
-              <div className="justify-center">
+              <div className="justify-center end-justify">
                 <div className='range-div-w border'>
                   <div className='r5-img range-img-w div-hover'>
                     <div className="bg-blur"></div>
@@ -222,7 +223,7 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="justify-center">
+              <div className="justify-center start-justify">
                 <div className='range-div-w border'>
                   <div className='r6-img range-img-w div-hover'>
                     <div className="bg-blur"></div>
@@ -236,7 +237,7 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="justify-center">
+              <div className="justify-center end-justify">
                 <div className='range-div-w border'>
                   <div className='r7-img range-img-w div-hover'>
                     <div className="bg-blur"></div>
@@ -250,7 +251,7 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="justify-center">
+              <div className="justify-center start-justify">
                 <div className='range-div-w border'>
                   <div className='r8-img range-img-w div-hover'>
                     <div className="bg-blur"></div>
@@ -275,77 +276,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* <section className='range-sec'>
-        <div className='container'>
-          <div className="row g-5">
-            <div className="col-lg-3 col-md-4 col-sm-6 justify-center">
-              <div className='range-div-w border'>
-                <div className='r1-img range-img-w div-hover '>
-                  <div className="bg-blur"></div>
-                  <Link to="/pomegranate" className='sub-img'>
-                    <img src={require('../img/asset 37.jpeg')} alt="" title='Piper Sudan Grass Seed' />
-                  </Link>
-                </div>
-                <div className='range-font'>
-                  <Link to="" title='Piper Sudan Grass Seed'>Piper Sudan Grass Seed</Link>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-3 col-md-4 col-sm-6 justify-center">
-              <div className='range-div-w border'>
-                <div className='r1-img range-img-w div-hover '>
-                  <div className="bg-blur"></div>
-                  <Link to="/pomegranate" className='sub-img'>
-                    <img src={require('../img/asset 37.jpeg')} alt="" title='Piper Sudan Grass Seed' />
-                  </Link>
-                </div>
-                <div className='range-font'>
-                  <Link to="" title='Piper Sudan Grass Seed'>Piper Sudan Grass Seed</Link>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-3 col-md-4 col-sm-6 justify-center">
-              <div className='range-div-w border'>
-                <div className='r1-img range-img-w div-hover '>
-                  <div className="bg-blur"></div>
-                  <Link to="/pomegranate" className='sub-img'>
-                    <img src={require('../img/asset 37.jpeg')} alt="" title='Piper Sudan Grass Seed' />
-                  </Link>
-                </div>
-                <div className='range-font'>
-                  <Link to="" title='Piper Sudan Grass Seed'>Piper Sudan Grass Seed</Link>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-3 col-md-4 col-sm-6 justify-center">
-              <div className='range-div-w border'>
-                <div className='r1-img range-img-w div-hover '>
-                  <div className="bg-blur"></div>
-                  <Link to="/pomegranate" className='sub-img'>
-                    <img src={require('../img/asset 37.jpeg')} alt="" title='Piper Sudan Grass Seed' />
-                  </Link>
-                </div>
-                <div className='range-font'>
-                  <Link to="" title='Piper Sudan Grass Seed'>Piper Sudan Grass Seed</Link>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-3 col-md-4 col-sm-6 justify-center">
-              <div className='range-div-w border'>
-                <div className='r1-img range-img-w div-hover '>
-                  <div className="bg-blur"></div>
-                  <Link to="/pomegranate" className='sub-img'>
-                    <img src={require('../img/asset 37.jpeg')} alt="" title='Piper Sudan Grass Seed' />
-                  </Link>
-                </div>
-                <div className='range-font'>
-                  <Link to="" title='Piper Sudan Grass Seed'>Piper Sudan Grass Seed</Link>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section> */}
+    
       {/*---------------------------- End Product Range ----------------------- */}
 
 

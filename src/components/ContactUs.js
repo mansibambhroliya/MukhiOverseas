@@ -52,7 +52,7 @@ export default function ContactUs() {
           <div className="row about-space container-fluid">
 
             <div className="col-md-6 col-sm-12 d-flex align-items-md-center ">
-              <h2 className='fs-4 text-white'>Contact Us</h2>
+              <h2 className='fs-4 text-white'>Mukhi Overseas</h2>
             </div>
 
             <div className="col-md-6 col-sm-12  d-flex justify-content-md-end align-items-md-center mini-name fw-bold text-white ">
@@ -68,15 +68,15 @@ export default function ContactUs() {
 
       {/* --------------------------- Start Section ------------------------------ */}
       <section className='mb-4'>
-        <div className="row contact-sec container-fluid ">
+        <div className="row row-1 container-fluid" id='contact-sec'>
 
-          <div className="col-md-3 col-sm-3 mt-md-3 mt-5">
-            <div>
-              <div className='ms font-darkcyan fw-bold fs-6'>
-                <p><Link to="/products">Mukhi Overseas</Link></p>
+          <div className="col1 pe-1">
+            <div className='ps-xl-4 pt-sm-4'>
+              <div className='ms font-darkcyan'>
+              <Link to="/products"><h1>Mukhi Overseas</h1></Link>
               </div>
 
-              <div className='contact mb-5'>
+              <div className='contact mb-5 me-0 pe-0' >
                 <p className='ms'>M. D. Sharma</p>
                 <div className='d-flex'>
                   <span><IoLocationSharp className='cont-icon'></IoLocationSharp></span>
@@ -88,7 +88,7 @@ export default function ContactUs() {
                 </p>
                 <div className='d-flex mb-3'>
                   <span><MdOutlineMail className='cont-icon'></MdOutlineMail></span>
-                  <span className='just-for-hover w-75 '><Link className='mail-wrap'>mukhioverseas@gmail.com</Link></span>
+                  <span className='just-for-hover w-75'><Link className='mail-wrap'>mukhioverseas@gmail.com</Link></span>
                 </div>
                 <div className='d-flex'>
                   <span><GiEarthAfricaEurope className='cont-icon'></GiEarthAfricaEurope></span>
@@ -99,26 +99,26 @@ export default function ContactUs() {
             </div>
           </div>
 
-          <div className="col-md-9 col-sm-9 pad-0">
-            <div className='pad cont-bg ms-md-3'>
+          <div className="col2 pad-0">
+            <div className='pad ms-md-3 cont-bg'>
               <form name='valForm' onSubmit={myValidation} action="#">
 
-                <div className='row'>
+                <div className='row row-2'>
                   <h1 className='p-0 mb-2'>Send us a Message</h1>
 
-                  <div className="col-sm-6 div-border">
+                  <div className="col1 div-border">
                     <span>*</span>
                     <input type="text" name='name' placeholder='Name' />
                   </div>
-                  <div className="col-sm-6 div-border">
+                  <div className="col2 div-border">
                     <span>*</span>
                     <input type="text" name='email' placeholder='Email' />
                   </div>
-                  <div className="col-sm-6 div-border">
+                  <div className="col1 div-border">
                     <span>*</span>
                     <input type="text" name='phone' placeholder='Phone' />
                   </div>
-                  <div className="col-sm-6 div-border">
+                  <div className="col2 div-border">
                     <span>*</span>
                     <select id="country" name="country" >
                       <option>Select Country</option>
@@ -382,7 +382,7 @@ export default function ContactUs() {
                   </div>
 
                   <span className='p-0 pt-2'>
-                    <input type="submit" className='btn-send fs-6 fw-semibold px-3' value="Send Massage" />
+                    <input type="submit" className='btn-send fw-semibold' value="Send Massage" />
                   </span>
                 </div>
               </form>

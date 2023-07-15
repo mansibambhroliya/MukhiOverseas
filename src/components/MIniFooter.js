@@ -5,11 +5,12 @@ import { Link } from 'react-router-dom'
 export default function MIniFooter() {
     return (
         <>
-            <footer className='container-fluid footer-bg full-pad mini-footer'>
+            <footer className='container-fluid footer-bg full-pad ' id='mini-footer'>
                 <div>
-                    <div className="row mb-3 p-0">
-                        <div className="col-sm-4 col-12 d-flex justify-content-sm-start justify-content-center">
-                            <div className='text-sm-start text-center '>
+
+                    <div className="row row-3">
+                        <div className="col1">
+                            <div className=''>
                                 <img className='pe-1' src={require('../img/asset 23.png')} />
                                 <img className='pe-1' src={require('../img/asset 24.png')} />
                                 <img className='pe-1' src={require('../img/asset 25.png')} />
@@ -93,49 +94,63 @@ export default function MIniFooter() {
                             </div>
                         </div>
 
-                        <div className="col-sm-8 col-12">
-                            <div className='d-flex justify-content-sm-end justify-content-center mt-2'>
-                                <span >Visit No.:
-                                    <img src={require('../img/asset 27.gif')} alt="" />
+                        <div className="col2">
+                            <span >Visit No.:
+                                {/* <img src={require('../img/asset 27.gif')} alt="" />
                                     <img src={require('../img/asset 27.gif')} alt="" />
                                     <img src={require('../img/asset 28.gif')} alt="" />
                                     <img src={require('../img/asset 29.gif')} alt="" />
-                                    <img src={require('../img/asset 30.gif')} alt="" />
-                                </span>
-                            </div>
+                                    <img src={require('../img/asset 30.gif')} alt="" /> */}
+                            </span>
                         </div>
                     </div>
 
-                    <div className="row ">
-                        <div className="col-sm-4 col-12 ">
-                            <p className='d-flex justify-content-sm-start justify-content-center'>
+                    <div className="row row-3">
+                        <div className="col1">
+                            <div className=''>
                                 <Link to="https://www.facebook.com/Mukhioverseas/" className='me-3'>
                                     <img src={require('../img/asset 20.png')} />
                                 </Link>
                                 <Link to="https://www.linkedin.com/in/mukhi-overseas-7b8a14190">
                                     <img src={require('../img/asset 21.png')}></img>
                                 </Link>
-                            </p>
-                        </div>
-
-                        <div className="col-sm-8 col-12 ">
-                            <div className="general-link">
-                                <p className='text-sm-end text-center'>
-                                    <Link to="/">Home</Link>|
-                                    <Link to="/about">About Us</Link>|
-                                    <Link to="/product">Product</Link>|
-                                    <Link to="/contact">Contact Us</Link>|
-                                    <Link to="/">Equiry</Link>|
-                                    <Link to="/" className='pe-2'>Site Map</Link>
-                                    <Link to="http://www.mukhioverseas.com/products.rss">
-                                        <img src={require('../img/asset 22.png')} alt="" />
-                                    </Link></p>
                             </div>
                         </div>
 
-                        <hr className='text-white mb-3' />
+                        <div className="col2 general-link">
+                            <div className='text-sm-end'>
+                                <Link to="/">Home</Link>|
+                                <Link to="/about">About Us</Link>|
+                                <Link to="/product">Product</Link>|
+                                <Link to="/contact">Contact Us</Link>|
+                                <Link to="/">Equiry</Link>|
+                                <Link to="/" className='pe-2'>Site Map</Link>
+                                <Link to="http://www.mukhioverseas.com/products.rss" className='p-0'>
+                                    <img src={require('../img/asset 22.png')} alt="" />
+                                </Link>
+                            </div>
 
-                        <div className="row p-0 m-0">
+                        </div>
+                    </div>
+
+                    <hr />
+
+                    <div className="row row-3">
+                        <div className="col1">
+                            <div className='t-center'>
+                                Mukhi Overseas <br />
+                                Developed & Managed By Weblink.in Pvt.Ltd
+                            </div>
+                        </div>
+
+                        <div className="col2">
+                            <div className=''>
+                                <img src={require('../img/asset 31.png')} alt="" />
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* <div className="row p-0 m-0">
                             <div className="col-sm-6 ">
                                 <div className='t-center'>
                                     Mukhi Overseas <br />
@@ -148,8 +163,8 @@ export default function MIniFooter() {
                                     <img src={require('../img/asset 31.png')} alt="" />
                                 </div>
                             </div>
-                        </div>
-                    </div>
+                        </div> */}
+
                 </div>
             </footer>
         </>

@@ -31,7 +31,7 @@
 .disc-about-sec .a1-font b,
 .disc-about-sec .a1-font,
 .prod-div h1 a:hover,
-.contact-sec .cont-bg h1 {
+#contact-sec .cont-bg h1 {
     color: var(--color-nevy-blue) !important;
 }
 
@@ -45,7 +45,7 @@ header,
 .top-line,
 .disc-about-sec,
 .about-section,
-.contact-sec,
+#contact-sec,
 .about-sec {
     font-family: var(--font-baloo);
 }
@@ -65,24 +65,37 @@ header,
     word-wrap: break-word;
 }
 
+::-webkit-scrollbar{
+    width: 1rem;
+}
+::-webkit-scrollbar-track{
+    background-color: rgb(232, 232, 232);
+}
+::-webkit-scrollbar-thumb{
+    background-color: rgb(190, 189, 189);
+    background-clip: content-box;
+}
 /* ---------------------------------------------- Header */
 header {
-    height: 90px;
+    height: 80px;
     background-color: white;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
-    /* padding: 11px 12%; */
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    /* padding: 0 12%; */
     text-transform: capitalize;
     font-size: 15px;
     font-weight: 600;
     /* z-index: 1000; */
+    /* display: flex; */
+    align-items: center;
+}
+.header{
+    display: flex;
+    /* align-items: center; */
+    justify-content: space-between ;
 }
 
-
-header .logo img {
-    width: 300px;
+.header .logo img {
+    width: 80%;
 }
 
 .navbar ul , .canva ul {
@@ -162,7 +175,9 @@ header .logo img {
     background-color: var(--color-cyan);
 }
 /* -----------------------------  Offcanvas */
-.off-btn {
+.off-canvas-btn {
+    border: none;
+    background-color: transparent;
     font-size: 35px;
 }
 .w-5 {
@@ -251,11 +266,11 @@ header .logo img {
 }
 
 .container1 {
-    /* position: relative; */
+    position: relative;
     width: 1200px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-gap: 10px 5px;
+    grid-gap: 15px 0px;
 
 }
 
@@ -276,7 +291,7 @@ header .logo img {
 .range-sec .range-img-w,
 .card .range-img-w {
     width: 227px;
-    height: 227px;
+    height: 230px;
     overflow: hidden;
 }
 
@@ -516,7 +531,7 @@ header .logo img {
 
 /* ------------------------------------------------  Footer */
 .footer-bg {
-    padding: 30px 184px 15px 184px;
+    padding: 20px 184px 15px 184px;
     background-color: var(--color-nevy-blue);
     background-image: url('../img/asset\ 52.png');
     color: #b3b9bd;
