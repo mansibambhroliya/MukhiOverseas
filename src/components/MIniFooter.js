@@ -95,13 +95,15 @@ export default function MIniFooter() {
                         </div>
 
                         <div className="col2">
-                            <span >Visit No.:
-                                {/* <img src={require('../img/asset 27.gif')} alt="" />
+                            <div className='justify-end'>
+                                <span>Visit No.:
+                                    {/* <img src={require('../img/asset 27.gif')} alt="" />
                                     <img src={require('../img/asset 27.gif')} alt="" />
                                     <img src={require('../img/asset 28.gif')} alt="" />
                                     <img src={require('../img/asset 29.gif')} alt="" />
                                     <img src={require('../img/asset 30.gif')} alt="" /> */}
-                            </span>
+                                </span>
+                            </div>
                         </div>
                     </div>
 
@@ -136,34 +138,19 @@ export default function MIniFooter() {
                     <hr />
 
                     <div className="row row-3">
-                        <div className="col1">
+                        <div className="col1 m-2">
                             <div className='t-center'>
                                 Mukhi Overseas <br />
                                 Developed & Managed By Weblink.in Pvt.Ltd
                             </div>
                         </div>
 
-                        <div className="col2">
-                            <div className=''>
+                        <div className="col2 ">
+                            <div className='d-flex justify-content-end'>
                                 <img src={require('../img/asset 31.png')} alt="" />
                             </div>
                         </div>
                     </div>
-
-                    {/* <div className="row p-0 m-0">
-                            <div className="col-sm-6 ">
-                                <div className='t-center'>
-                                    Mukhi Overseas <br />
-                                    Developed & Managed By Weblink.in Pvt.Ltd
-                                </div>
-                            </div>
-
-                            <div className="col-sm-6  d-flex justify-content-sm-end justify-content-center ">
-                                <div className=''>
-                                    <img src={require('../img/asset 31.png')} alt="" />
-                                </div>
-                            </div>
-                        </div> */}
 
                 </div>
             </footer>

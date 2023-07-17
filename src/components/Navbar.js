@@ -7,6 +7,7 @@ import Offcanvas from 'react-bootstrap/Offcanvas';
 import Button from 'react-bootstrap/Button';
 import { Affix } from 'rsuite';
 import { BiChevronRight } from "react-icons/bi";
+import { PiDotsThreeVerticalBold } from "react-icons/pi";
 
 export default function Navbar() {
 
@@ -20,12 +21,12 @@ export default function Navbar() {
   return (
     <>
       <Affix>
-        <header>
-          <div className='header'>
+        <header className='full-pad'>
+          <div className='header h-auto'>
 
             <div>
               {/* --------------------------------start  offcanvas ------------------------- */}
-              <button className='off-canvas-btn p-0 m-0' onClick={handleShow}>
+              <button className='off-canvas-btn' onClick={handleShow}>
                 <HiBars3CenterLeft></HiBars3CenterLeft>
               </button>
               <Offcanvas show={show} onHide={handleClose} className="w-5">
@@ -148,10 +149,12 @@ export default function Navbar() {
                         <li className='sub-menu-btn '><Link>View All</Link></li>
                       </ul>
                     </li>
+                    
                   </ul>
                 </li>
 
                 <li><NavLink to="/contact" >Contact Us</NavLink></li>
+                {/* <li className='three-dots'><PiDotsThreeVerticalBold></PiDotsThreeVerticalBold></li> */}
               </ul>
             </nav>
 

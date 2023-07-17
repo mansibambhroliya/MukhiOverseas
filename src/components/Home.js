@@ -121,6 +121,7 @@ export default function Home() {
           <div className=''></div>
         </div>
       </div>
+
       {/*  One : for cut  */}
       {/*---------------------------- End Banner ----------------------- */}
 
@@ -143,6 +144,11 @@ export default function Home() {
       {/*---------------------------- End QUALITY SPEAKS FOR US! ----------------------- */}
 
       {/*---------------------------- Start Product Range ----------------------- */}
+      <section>
+
+        
+      </section>
+
       <section className='range-sec'>
         <div className='container'>
           <div>
@@ -156,10 +162,13 @@ export default function Home() {
                 <div className='range-div-w border'>
                   <div className='r1-img range-img-w div-hover'>
                     <div className="bg-blur"></div>
-                    <Link to="/pomegranate" className='sub-img'>
-                      <img src={require('../img/asset 37.jpeg')} alt="" title='Piper Sudan Grass Seed' />
-                    </Link>
+                    <div className="">
+                      <Link to="/pomegranate" className='sub-img'>
+                        <img src={require('../img/asset 37.jpeg')} alt="" title='Piper Sudan Grass Seed' />
+                      </Link>
+                    </div>
                   </div>
+
                   <div className='range-font'>
                     <Link to="" title='Piper Sudan Grass Seed'>Piper Sudan Grass Seed</Link>
                   </div>
@@ -276,7 +285,7 @@ export default function Home() {
         </div>
       </section>
 
-    
+
       {/*---------------------------- End Product Range ----------------------- */}
 
 

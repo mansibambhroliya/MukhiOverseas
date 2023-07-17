@@ -77,25 +77,25 @@ header,
 }
 /* ---------------------------------------------- Header */
 header {
-    height: 80px;
+    height: 100px;
     background-color: white;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
     /* padding: 0 12%; */
     text-transform: capitalize;
     font-size: 15px;
     font-weight: 600;
-    /* z-index: 1000; */
     /* display: flex; */
     align-items: center;
 }
 .header{
     display: flex;
     /* align-items: center; */
-    justify-content: space-between ;
+    justify-content: space-between;
 }
 
 .header .logo img {
     width: 80%;
+    /* width: 365px; */
 }
 
 .navbar ul , .canva ul {
@@ -286,6 +286,10 @@ header {
     border-radius: 10px;
     background-color: white;
     border: 1px var(--color-nevy-blue) solid;
+    max-width: 100%;
+    width: auto;
+    max-height: 100%;
+    height: auto;
 }
 
 .range-sec .range-img-w,
@@ -293,6 +297,17 @@ header {
     width: 227px;
     height: 230px;
     overflow: hidden;
+}
+.range-sec .sub-img img {
+    position: absolute;
+    /* top: 60px; */    
+}
+
+.range-sec .sub-img {
+    height: auto;
+    display: flex;
+    align-items: center !important;
+    justify-content: center;
 }
 
 .range-sec .div-hover {
@@ -320,16 +335,7 @@ header {
     position: relative;
 }
 
-.range-sec .sub-img img {
-    position: absolute;
-    top: 60px;
-}
 
-.range-sec .sub-img {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 
 .range-sec .r2-img {
     background-image: url('../img/asset\ 38.jpeg');
@@ -388,6 +394,8 @@ header {
     background-size: cover;
     padding-top: 40px;
 }
+
+
 
 .feature-title {
     margin-bottom: 40px;

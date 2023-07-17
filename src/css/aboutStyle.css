@@ -405,3 +405,7 @@
 .error {
     color: red;
 }
+.justify-end{
+    display: flex;
+    justify-content: end;
+}
