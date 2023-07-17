@@ -22,12 +22,12 @@ export default function Navbar() {
     <>
       <Affix>
         <header className='full-pad'>
-          <div className='header h-auto'>
+          <div className='header'>
 
-            <div>
+            <div className='d-flex align-items-center'>
               {/* --------------------------------start  offcanvas ------------------------- */}
-              <button className='off-canvas-btn' onClick={handleShow}>
-                <HiBars3CenterLeft></HiBars3CenterLeft>
+              <button className='off-canvas-btn  ' onClick={handleShow}>
+                <HiBars3CenterLeft className=''></HiBars3CenterLeft>
               </button>
               <Offcanvas show={show} onHide={handleClose} className="w-5">
                 <Offcanvas.Header closeButton>

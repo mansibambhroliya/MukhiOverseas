@@ -61,8 +61,8 @@ export default function Top_Line() {
     return (
         <>
             <div className='top-line full-pad'>
-                <div className="row top-line-space container-fluid">
-                    <div className="col-md-6 col-sm-12 ">
+                <div className="row top-line-space container-fluid mx-0">
+                    <div className="col-md-6 col-sm-12 px-0">
                         <div className='d-flex f-div'>
                             <div>
                                 <MdOutlineMail className='me-1 fs-5'></MdOutlineMail>
@@ -77,8 +77,8 @@ export default function Top_Line() {
 
                     <div className="col-md-6 col-sm-12 d-flex justify-content-end px-0">
                         <div className='d-flex'>
-                            {/* ------------------ mail btn ------------------------ */}
-                            <div >
+                            {/* ---------------p---- mail btn ------------------------ */}
+                            <div>
                                 {/* <!-- Button trigger modal --> */}
                                 <button type="button" class="mail-btn me-3 align-center" data-bs-toggle="modal" data-bs-target="#mail">
                                     <MdOutlineMail className='fs-6  me-1'></MdOutlineMail>SEND EMAIL
@@ -355,7 +355,7 @@ export default function Top_Line() {
                             {/* ------------------ sms btn ------------------------ */}
                             <div>
                                 {/* <!-- Button trigger modal --> */}
-                                <button type="button" class="sms-btn mail-btn me-0 align-center" data-bs-toggle="modal" data-bs-target="#sms">
+                                <button type="button" class="sms-btn mail-btn align-center" data-bs-toggle="modal" data-bs-target="#sms">
                                     <FaMobileAlt className='fs-6 me-1'></FaMobileAlt>SEND SMS
                                 </button>
 

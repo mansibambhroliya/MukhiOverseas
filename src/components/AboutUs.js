@@ -16,6 +16,130 @@ export default function AboutUs() {
   const [isActive, setIsActive] = useState(false); // for accordian
   const [isLink, setIsLink] = useState(false); // for accordian
 
+  const products = [
+    {
+      link: "/indianrice",
+      name: "Indian Rice",
+      sub_products: [
+        {
+          sub_link: "/basmati",
+          sub_name: "Basmati Rice"
+        },
+        {
+          sub_link: "/nonbasmati",
+          sub_name: "Non Basmati Rice"
+        }
+      ]
+    },
+    {
+      link: "/grains",
+      name: "Grains",
+      sub_products: [
+        {
+          sub_link: "/greenmellet",
+          sub_name: "Green Mellet"
+        },
+        {
+          sub_link: "/yellomaize",
+          sub_name: "Yellow Maize"
+        },
+        {
+          sub_link: "/barley",
+          sub_name: "Barley"
+        },
+        {
+          sub_link: "/sorghum",
+          sub_name: "Sourghum"
+        }
+      ]
+    },
+    {
+      link: "/fodderseeds",
+      name: "Fodder Seeds",
+      sub_products: [
+        {
+          sub_link: "/alfalfagrassseeds",
+          sub_name: "Alfalfa Grass Seeds"
+        },
+        {
+          sub_link: "/pipersudangrassseeds",
+          sub_name: "Piper Sudan Grass Seeds"
+        }
+      ]
+    },
+    {
+      link: "/freshfruits",
+      name: "Fresh Fruits",
+      sub_products: [
+        {
+          sub_link: "/freshpomegrants",
+          sub_name: "Fresh Pomegrants"
+        }
+      ]
+    },
+    {
+      link: "/freshvegetable",
+      name: "Fresh Vegetables",
+      sub_products: [
+        {
+          sub_link: "/freshginger",
+          sub_name: "Fresh Ginger"
+        },
+        {
+          sub_link: "/freshredonion",
+          sub_name: "Fresh Red Onion"
+        }
+      ]
+    },
+    {
+      link: "/indianspices",
+      name: "Indian Spices",
+      sub_products: [
+        {
+          sub_link: "/ajwainseeds",
+          sub_name: "Ajwain Seeds"
+        },
+        {
+          sub_link: "/aselioseeds",
+          sub_name: "Aselio Seeds"
+        },
+        {
+          sub_link: "/corianderseeds",
+          sub_name: "Coriander Seeds"
+        },
+        {
+          sub_link: "/cuminseeds",
+          sub_name: "Cumin Seeds"
+        },
+        {
+          sub_link: "/fennelseeds",
+          sub_name: "Fennel seeds"
+        },
+        {
+          sub_link: "/fenugreekseeds",
+          sub_name: "Fenugreek Seeds"
+        },
+        {
+          sub_link: "/bayleaves",
+          sub_name: "Bay Leaves"
+        },
+        {
+          sub_link: "/sennaleaves",
+          sub_name: "Senna Leaves"
+        },
+        {
+          sub_link: "/redchillipowder",
+          sub_name: "Red Chilli Powder"
+        },
+        {
+          sub_link: "/turmericpowder",
+          sub_name: "Turmeric Powder"
+        }
+      ]
+    }
+
+  ]
+
   return (
     <>
       <Top_Line />
@@ -25,15 +149,15 @@ export default function AboutUs() {
       {/* --------------------------- Start About Name bar ------------------------------ */}
       <section className='theme-bg'>
         <div className='about-sec full-pad '>
-          <div className="row about-space container-fluid">
+          <div className="row row-4 about-space font-white container-fluid">
 
-            <div className="col-md-6 col-sm-12 d-flex align-items-md-center ">
-              <h2 className='fs-4 text-white'>About Us</h2>
+            <div className="col1">
+              <h2 className='m-0'>About Us</h2>
             </div>
 
-            <div className="col-md-6 col-sm-12  d-flex justify-content-md-end align-items-md-center mini-name fw-bold text-white ">
-              <span><Link to="/" className='text-decoration-none text-white'>Home</Link></span>
-              <span className='mx-1 '><BiChevronRight></BiChevronRight></span>
+            <div className="col2 mini-name">
+              <span><Link to="/" className='text-decoration-none font-white'>Home</Link></span>
+              <span className='mx-1'><BiChevronRight></BiChevronRight></span>
               <span>About Us</span>
             </div>
           </div>
@@ -43,9 +167,9 @@ export default function AboutUs() {
 
       {/* --------------------------- Start Description About us ------------------------------ */}
       <section>
-        <div className='disc-about-sec full-pad container-fluid'>
-          <div className="row">
-            <div className="col-md-9 col-sm-12 a1-font">
+        <div className='disc-about-sec  full-pad container-fluid' id='main-about-dis'>
+          <div className="row row-4">
+            <div className="col1 a1-font ">
               <div>
                 <p>Mukhi Overseas has earned the trust and confidence of our global customers/buyers by providing best-in-class products, delivering it at the right time, round the clock and across the globe! We are into Export & Import of agricultural produce like Hulled Sesame Seeds, Spices, Rice, Food grains, Fruits & Vegetables and Animal Feed range worldwide. We focus on quality rather than quantity. For us, “Quantity is not the criteria rather Quality is the parameter!”</p>
                 <p>Mukhi Overseas is a Government of India Recognized Merchant Cum Export House, having diversified business into areas of Agricultural Commodities, Food Grains, Rice, Fruits & Vegetables and Animal Feed. Since 2018, the group has been making progress in leaps and bounds for exporting products and commodities to even the far-reaching corners of the world. Every day, we create sustainable models of adhering to the best practices in the industry. We have always endeavoured to offer the best of the quality products in the International markets. A truly remarkable export track record has earned us several prestigious Customers. Mukhi Overseas offers the best of Agricultural Commodities & Food Products.
@@ -57,7 +181,7 @@ export default function AboutUs() {
                 <p>We are ready and able to offer you the best possible grains price based on market price, but not fictitious price! Your suggestion to new customers before contacting us is that to update themselves with the market price, otherwise we do not response to inquiries which are not based on the real market price.</p>
 
                 <b>Company Strategy</b>
-                <ul className='mt-4'>
+                <ul className='ct-margin'>
                   <li>
                     <b>Purpose : </b>
                     <span>To be a leader in the food and animal feed grain products supplying by providing enhanced services, relationship and profitability.</span>
@@ -108,7 +232,7 @@ export default function AboutUs() {
               </div>
             </div>
 
-            <div className="col-md-3 col-sm-12 px-2 a2-font ">
+            <div className="col2 px-1 a2-font ">
 
               <div className='border mb-3'>
                 <div className='prod-div align-center'>
@@ -116,81 +240,24 @@ export default function AboutUs() {
                 </div>
 
                 <div className='link-col'>
-
-                  <ul className='ul-style'>
-                    <li ><Link to="/indianrice" className=''>Indian Rice</Link>
-                      <ul>
-                        <li><Link to="/basmatirice"><BiChevronRight></BiChevronRight>Basmatirice</Link></li>
-                        <li><Link to="/nonbasmatirice"><BiChevronRight></BiChevronRight>Non Basmatirice</Link></li>
+                  {
+                    products.map((product) => (
+                      <ul className='ul-style'>
+                        <li><Link to={product.link}>{product.name}</Link>
+                          {
+                            product.sub_products.map((items) => (
+                              <ul>
+                                <li className='d-flex'>
+                                  <b className='me-3px'><BiChevronRight></BiChevronRight></b>
+                                  <p className='m-0'><Link to={items.sub_link}> {items.sub_name} </Link></p>
+                                </li>
+                              </ul>
+                            ))
+                          }
+                        </li>
                       </ul>
-                    </li>
-                  </ul>
-
-                  <ul className='ul-style'>
-                    <li ><Link to="/grains">Grains</Link>
-                      <ul>
-                        <li><Link to="/greenmillet"><BiChevronRight></BiChevronRight>Green Millet </Link></li>
-                        <li><Link to="/yellowmaize"><BiChevronRight></BiChevronRight>Yellow Maize </Link></li>
-                        <li><Link to="/barly"><BiChevronRight></BiChevronRight>Barly</Link></li>
-                        <li><Link to="/sorgum"><BiChevronRight></BiChevronRight>Sorgum </Link></li>
-                        <li><Link to="/wheat"><BiChevronRight></BiChevronRight>Wheat </Link></li>
-                        <li><Link to="sesameseeds"><BiChevronRight></BiChevronRight>Sesame Seeds </Link></li>
-                      </ul>
-                    </li>
-                  </ul>
-
-                  <ul className='ul-style'>
-                    <li ><Link to="/foddderseeds">Fodder Seeds</Link>
-                      <ul>
-                        <li><Link to="/alfalfagrassseeds"><BiChevronRight></BiChevronRight>Alfalfa Grass Seeds </Link></li>
-                        <li><Link to="/pipersudangrassseeds"><BiChevronRight></BiChevronRight>Piper Sudan Grass Seeds </Link></li>
-                      </ul>
-                    </li>
-                  </ul>
-
-                  <ul className='ul-style'>
-                    <li ><Link to="/freshfruits">Fresh Fruits</Link>
-                      <ul>
-                        <li><Link to="/freshpomegrants"><BiChevronRight></BiChevronRight>Pomegrants </Link></li>
-                      </ul>
-                    </li>
-                  </ul>
-
-                  <ul className='ul-style'>
-                    <li ><Link to="/indianrice" className=''>Indian Rice</Link>
-                      <ul>
-                        <li><Link to="/basmatirice"><BiChevronRight></BiChevronRight>Basmatirice</Link></li>
-                        <li><Link to="/nonbasmatirice"><BiChevronRight></BiChevronRight>Non Basmatirice</Link></li>
-                      </ul>
-                    </li>
-                  </ul>
-
-                  <ul className='ul-style'>
-                    <li ><Link to="/freshvegetable">Fresh Vegetables</Link>
-                      <ul>
-                        <li><Link to="/freshginger"><BiChevronRight></BiChevronRight>Fresh Ginger</Link></li>
-                        <li><Link to="freshredonion"><BiChevronRight></BiChevronRight>Fresh Red Onion</Link></li>
-                      </ul>
-                    </li>
-                  </ul>
-
-                  <ul className='ul-style'>
-                    <li ><Link to="/indianspices">Indian Spices</Link>
-                      <ul>
-                        <li><Link to="/ajwainseeds"><BiChevronRight></BiChevronRight>Ajwain Seeds </Link></li>
-                        <li><Link to="/aselioseeds"><BiChevronRight></BiChevronRight>Aselio Seeds </Link></li>
-                        <li><Link to="/corianderseeds"><BiChevronRight></BiChevronRight>Coriander Seeds </Link></li>
-                        <li><Link to="cuminseeds"><BiChevronRight></BiChevronRight>Cumin Seeds </Link></li>
-                        <li><Link to="/fennelseeds"><BiChevronRight></BiChevronRight>Fennel seeds </Link></li>
-                        <li><Link to="/fenugreekseeds"><BiChevronRight></BiChevronRight>Fenugreek Seeds </Link></li>
-                        <li><Link to="/bayleaves"><BiChevronRight></BiChevronRight>Bay Leaves </Link></li>
-                        <li><Link to="/sennaleaves"><BiChevronRight></BiChevronRight>Senna Leaves  </Link></li>
-                        <li><Link to="/redchillipowder"><BiChevronRight></BiChevronRight>Red Chilli Powder </Link></li>
-                        <li><Link to="/turmericpowder"><BiChevronRight></BiChevronRight>Termeric Powder </Link></li>
-                      </ul>
-                    </li>
-                  </ul>
-
+                    ))
+                  }
                 </div>
               </div>
 
@@ -200,13 +267,13 @@ export default function AboutUs() {
                 </div>
 
                 <div className='text-left'>
-                  <ul>
-                    <li>Mukhi Overseas</li>
+                  <ul className='mb-2'>
+                    <li className='font-darkcyan fw-semibold'>Mukhi Overseas</li>
                     <li>B9 SHIROMANI COMPLEX OPP BARODA EXPRESS HIGHWAY CTM, Ghodasar, Ahmedabad, Gujarat - 380026, India </li>
                     <li><b>Mobile:</b> <span>+91-8866606069, +91-9328585464</span></li>
                     <li><b>Call Us :</b> <span className='font-darkcyan fw-bold fs-6'>08048784470</span></li>
                     <li className='font-black'>
-                      <b>Email:</b>
+                      <b>Email : </b>
                       <Link href="#" className='mail-wrap'>mukhioverseas@gmail.com </Link>
                     </li>
                   </ul>
@@ -223,10 +290,9 @@ export default function AboutUs() {
 
       {/* --------------------------- End Description About us ------------------------------ */}
 
-      <section className='about-section disc-about-sec' >
-        <div className='p-accord'>
-          
-          <div className="accordion border mb-3">
+      <section className='disc-about-sec' id='about-section'>
+        <div>
+          <div className="accordion border mb-3 p-0">
             <div className="bottom-border align-center"
               onClick={() => setIsActive(!isActive)}
               aria-controls="example-collapse-text"

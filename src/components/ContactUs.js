@@ -48,15 +48,15 @@ export default function ContactUs() {
       <Gotoup />
       {/* --------------------------- Start About Name bar ------------------------------ */}
       <section className='theme-bg'>
-        <div className='about-sec full-pad '>
-          <div className="row about-space container-fluid">
+        <div className='about-sec full-pad'>
+          <div className="row row-4 about-space font-white container-fluid">
 
-            <div className="col-md-6 col-sm-12 d-flex align-items-md-center ">
-              <h2 className='fs-4 text-white'>Mukhi Overseas</h2>
+            <div className="col1">
+              <h2 className='m-0'>Mukhi Overseas</h2>
             </div>
 
-            <div className="col-md-6 col-sm-12  d-flex justify-content-md-end align-items-md-center mini-name fw-bold text-white ">
-              <span><Link to="/" className='text-decoration-none text-white'>Home</Link></span>
+            <div className="col2 mini-name">
+              <span><Link to="/" className='text-decoration-none font-white'>Home</Link></span>
               <span className='mx-1 '><BiChevronRight></BiChevronRight></span>
               <span>Contact US</span>
             </div>
@@ -67,17 +67,17 @@ export default function ContactUs() {
       {/* --------------------------- End About Name bar ------------------------------ */}
 
       {/* --------------------------- Start Section ------------------------------ */}
-      <section className='mb-4'>
+      <section>
         <div className="row row-1 container-fluid" id='contact-sec'>
 
           <div className="col1 pe-1">
             <div className='ps-xl-4 pt-sm-4'>
-              <div className='ms font-darkcyan'>
+              <div className='ms-31 font-darkcyan'>
               <Link to="/products"><h1>Mukhi Overseas</h1></Link>
               </div>
 
-              <div className='contact mb-5 me-0 pe-0' >
-                <p className='ms'>M. D. Sharma</p>
+              <div className='contact mb-md-0 mb-30 me-0 pe-2' >
+                <p className='ms-31'>M. D. Sharma</p>
                 <div className='d-flex'>
                   <span><IoLocationSharp className='cont-icon'></IoLocationSharp></span>
                   <p>B9 SHIROMANI COMPLEX OPP BARODA EXPRESS HIGHWAY CTM, Ghodasar, Ahmedabad, Gujarat - 380026, India</p>
@@ -86,9 +86,9 @@ export default function ContactUs() {
                 <p>
                   <FaMobileAlt className='cont-icon'></FaMobileAlt><div>+91-8866606069, +91-9328585464</div>
                 </p>
-                <div className='d-flex mb-3'>
+                <div className='d-flex'>
                   <span><MdOutlineMail className='cont-icon'></MdOutlineMail></span>
-                  <span className='just-for-hover w-75'><Link className='mail-wrap'>mukhioverseas@gmail.com</Link></span>
+                  <span className='just-for-hover w-75 mb-3'><Link className='mail-wrap'>mukhioverseas@gmail.com</Link></span>
                 </div>
                 <div className='d-flex'>
                   <span><GiEarthAfricaEurope className='cont-icon'></GiEarthAfricaEurope></span>

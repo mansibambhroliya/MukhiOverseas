@@ -5,18 +5,17 @@ import { Link } from 'react-router-dom'
 export default function MIniFooter() {
     return (
         <>
-            <footer className='container-fluid footer-bg full-pad ' id='mini-footer'>
-                <div>
-
-                    <div className="row row-3">
+            <footer className='container-fluid footer-bg full-pad ' id='mini-footer' >
+                <div className=''>
+                    <div className="row row-3 p-0">
                         <div className="col1">
-                            <div className=''>
+                            <div>
                                 <img className='pe-1' src={require('../img/asset 23.png')} />
                                 <img className='pe-1' src={require('../img/asset 24.png')} />
                                 <img className='pe-1' src={require('../img/asset 25.png')} />
                                 <img className='pe-1' src={require('../img/asset 26.png')} />
 
-                                <select data-placeholder="Select Language" name="country" className='lan-input mt-2'>
+                                <select data-placeholder="Select Language" name="country" className='lan-input'>
                                     <option value="Afrikaans" disabled selected>Select Language</option>
                                     <option value="Afrikaans">Afrikaans</option>
                                     <option value="Albanian">Albanian</option>
@@ -95,14 +94,8 @@ export default function MIniFooter() {
                         </div>
 
                         <div className="col2">
-                            <div className='justify-end'>
-                                <span>Visit No.:
-                                    {/* <img src={require('../img/asset 27.gif')} alt="" />
-                                    <img src={require('../img/asset 27.gif')} alt="" />
-                                    <img src={require('../img/asset 28.gif')} alt="" />
-                                    <img src={require('../img/asset 29.gif')} alt="" />
-                                    <img src={require('../img/asset 30.gif')} alt="" /> */}
-                                </span>
+                            <div>
+                                <span>Visit No.: </span>
                             </div>
                         </div>
                     </div>
@@ -120,7 +113,7 @@ export default function MIniFooter() {
                         </div>
 
                         <div className="col2 general-link">
-                            <div className='text-sm-end'>
+                            <div className=''>
                                 <Link to="/">Home</Link>|
                                 <Link to="/about">About Us</Link>|
                                 <Link to="/product">Product</Link>|
@@ -131,28 +124,26 @@ export default function MIniFooter() {
                                     <img src={require('../img/asset 22.png')} alt="" />
                                 </Link>
                             </div>
-
-                        </div>
+                        </div>                        
                     </div>
-
-                    <hr />
-
-                    <div className="row row-3">
-                        <div className="col1 m-2">
-                            <div className='t-center'>
-                                Mukhi Overseas <br />
-                                Developed & Managed By Weblink.in Pvt.Ltd
-                            </div>
-                        </div>
-
-                        <div className="col2 ">
-                            <div className='d-flex justify-content-end'>
-                                <img src={require('../img/asset 31.png')} alt="" />
-                            </div>
-                        </div>
-                    </div>
-
                 </div>
+
+                <div className="row row-3">
+                    <div className="col1">
+                        <div className='t-center'>
+                            Mukhi Overseas <br />
+                            Developed & Managed By Weblink.in Pvt.Ltd
+                        </div>
+                    </div>
+
+                    <div className="col2 ">
+                        <div className=''>
+                            <img src={require('../img/asset 31.png')} alt="" />
+                        </div>
+                    </div>
+                </div>
+
+
             </footer>
         </>
     )
