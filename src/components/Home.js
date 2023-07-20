@@ -109,8 +109,8 @@ export default function Home() {
                 <Carousel.Caption className='bg'>
                   <div className='cap-text caption-div'>
                     <p> {items.p_1} </p>
-                    <p className='h'> {items.p_2} </p>
-                    <p> {items.p_3} </p>
+                    <p className='h p'> {items.p_2} </p>
+                    <p className='p'> {items.p_3} </p>
                   </div>
                 </Carousel.Caption>
 

@@ -123,26 +123,36 @@
     }
 
     .spacer-speaks .speake-title h1 {
-        font-size: 20px !important;
+        font-size: 19px !important;
         line-height: 22px !important;
     }
 
     .banner .cap-text {
         text-align: left;
         margin-top: 5% !important;
-        margin-left: 15% !important;
-        line-height: 10px !important;
+        /* margin-left: 15% !important; */
+        line-height: 11px !important;
+        overflow-wrap: normal;
+
     }
 
     .banner .cap-text .h {
         font-size: 30px !important;
-        font-weight: 700;
+        font-weight: 700 !important;
+        line-height: .5px !important;
+
     }
 
     .banner .cap-text p {
         font-size: 14px !important;
+        line-height: 19.5px !important;
     }
+    @keyframes animate {
 
+        to {
+            margin-left: 10% !important;
+        }
+    }
 
 }
 
@@ -298,5 +308,12 @@
 
     #main_footer .mb-21px {
         margin-bottom: 11px !important;
+    }
+}
+
+@media (max-width:320px){
+    
+    .banner .cap-text {
+        margin-top: 0% !important;
     }
 }

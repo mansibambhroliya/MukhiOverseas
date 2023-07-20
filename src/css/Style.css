@@ -249,12 +249,15 @@ header {
 }
 
 .banner .cap-text .h {
-    font-size: 65px;
+    font-size: 60px;
     font-weight: 700;
+    line-height: 40px;
 }
 
 .banner .cap-text p {
-    font-size: 26px;
+    font-size: 24px;
+    line-height: 19.5px;
+    font-weight: 300;
 }
 
 .banner img {
@@ -266,7 +269,9 @@ header {
         transform: scale(1.5);
     }
 }
-
+.p{
+    line-height: 19px;
+}
 .banner .caption-div p {
     margin-left: -500%;
     transition: .3s linear;
