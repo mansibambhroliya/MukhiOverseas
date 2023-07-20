@@ -193,6 +193,96 @@ export default function ProductCardSection() {
                 </div>
               </div>
  */}
+
+{/* <div className="col-lg-3 col-md-4 col-sm-6 d-flex justify-content-center">
+              <div>
+                <div className='f1-img img-w'>
+                  <div className="bg-blur"></div>
+                  <Link to="/pomegranate" className='sub-img'>
+                    <img src={require('../img/asset 14.jpeg')} alt="" className='img-fluid' />
+                  </Link>
+                </div>
+                <div className='featured-font '>
+                  <Link to="/pomegranate" title='Fresh Pomegranate'>Fresh Pomegranate</Link>
+                </div>
+              </div>
+            </div>
+
+            <div className="col-lg-3 col-md-4 col-sm-6 d-flex justify-content-center">
+              <div>
+                <div className='f2-img img-w'>
+                  <div className="bg-blur"></div>
+                  <Link to="/ginger" className='sub-img'>
+                    <img src={require('../img/asset 15.jpeg')} alt="" />
+
+                  </Link>
+                </div>
+                <div className='featured-font'>
+                  <Link to="/ginger" title='Fresh Ginger'>Fresh Ginger</Link>
+                </div>
+              </div>
+            </div>
+
+            <div className="col-lg-3 col-md-4 col-sm-6 d-flex justify-content-center">
+              <div>
+                <div className='f3-img img-w'>
+                  <div className="bg-blur"></div>
+                  <Link to="/onion" className='sub-img'>
+                    <img src={require('../img/asset 16.jpeg')} alt="" />
+                  </Link>
+                </div>
+                <div className='featured-font'>
+                  <Link to="/onion" title='Fresh Red Onion'>Fresh Red Onion</Link>
+                </div>
+              </div>
+            </div>
+
+            <div className="col-lg-3 col-md-4 col-sm-6 d-flex justify-content-center">
+              <div>
+                <div className='f4-img img-w'>
+                  <div className="bg-blur"></div>
+                  <Link to="/redchilli" className='sub-img4'>
+                    <img src={require('../img/asset 17.jpeg')} alt="" />
+                  </Link>
+                </div>
+                <div className='featured-font'>
+                  <Link to="/redchili" title='Red Chilli Powder'>Red Chilli Powder</Link>
+                </div>
+              </div>
+            </div>
+
+
+
+            ----------------------------------------
+
+            <div className="col-lg-3 col-md-4 col-sm-6 d-flex justify-content-center">
+              <div>
+                <div className='f5-img img-w'>
+                  <div className="bg-blur"></div>
+                  <Link to="/pomegranate" className='sub-img'>
+                    <img src={require('../img/asset 18.jpeg')} alt="" />
+                  </Link>
+                </div>
+                <div className='featured-font'>
+                  <Link to="/pomegranate" title='Termeric Powder'>Termeric Powdere</Link>
+                </div>
+              </div>
+            </div>
+
+            <div className="col-lg-3 col-md-4 col-sm-6 d-flex justify-content-center">
+              <div>
+                <div className='f6-img img-w'>
+                  <div className="bg-blur"></div>
+                  <Link to="/pomegranate" className='sub-img'>
+                    <img src={require('../img/asset 19.png')} alt="" />
+                  </Link>
+                </div>
+                <div className='featured-font'>
+                  <Link to="/pomegranate" title='Basmati Rice'>Basmati Rice</Link>
+                </div>
+              </div>
+            </div> */}
+
         </>
     )
 }

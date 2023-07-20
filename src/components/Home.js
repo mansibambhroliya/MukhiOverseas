@@ -156,8 +156,8 @@ export default function Home() {
               <div className="row justify-center">
               {
                 Range_Product.map((product) => (
-                  <div className="col-lg-3 col-md-4 col-sm-6 mb-15px">
-                    <div className="justify-center">
+                  <div className="col-lg-3 col-md-4 col-sm-6 col6 mb-15px ">
+                    <div className=" justify-end-l">
                       <div className='range-div-w border'>
                         <div className='range-img-w div-hover' style={{ backgroundImage: `url(${product.img})` }} >
                           <div className="bg-blur"></div>
@@ -214,7 +214,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="col-lg-3 col-md-4 col-sm-6 justify-center">
+            <div className="col-lg-3 col-md-4 col-sm-6 d-flex justify-content-center">
               <div>
                 <div className='f2-img img-w'>
                   <div className="bg-blur"></div>
@@ -229,7 +229,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="col-lg-3 col-md-4 col-sm-6 justify-center">
+            <div className="col-lg-3 col-md-4 col-sm-6 d-flex justify-content-center">
               <div>
                 <div className='f3-img img-w'>
                   <div className="bg-blur"></div>
@@ -243,7 +243,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="col-lg-3 col-md-4 col-sm-6 justify-center">
+            <div className="col-lg-3 col-md-4 col-sm-6 d-flex justify-content-center">
               <div>
                 <div className='f4-img img-w'>
                   <div className="bg-blur"></div>
@@ -261,7 +261,7 @@ export default function Home() {
 
             {/* ---------------------------------------- */}
 
-            <div className="col-lg-3 col-md-4 col-sm-6 justify-center">
+            <div className="col-lg-3 col-md-4 col-sm-6 d-flex justify-content-center">
               <div>
                 <div className='f5-img img-w'>
                   <div className="bg-blur"></div>
@@ -275,7 +275,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="col-lg-3 col-md-4 col-sm-6 justify-center">
+            <div className="col-lg-3 col-md-4 col-sm-6 d-flex justify-content-center">
               <div>
                 <div className='f6-img img-w'>
                   <div className="bg-blur"></div>

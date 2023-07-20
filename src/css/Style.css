@@ -57,7 +57,7 @@ header,
 }
 
 
-.range-sec .justify-center {
+.justify-center {
     display: flex;
     justify-content: center;
 }
@@ -321,18 +321,21 @@ header {
     padding-bottom: 50px;
 }
 
-.container {
+.range-section .container {
     max-width: 1140px !important;
-    margin: auto;
 }
 
 .range-section {
     margin: 35px 0 20px 0;
 }
 
+.range-sec   .justify-end-l {
+    display: flex;
+    justify-content: center;
+}
 .range-sec .range-div-w {
     width: 252px;
-    /* height: 282px; */
+    height: 282px;
     padding: 10px;
     border-radius: 10px;
     background-color: white;
@@ -380,7 +383,7 @@ header {
 }
 
 .range-sec .div-hover:hover {
-    border: 1px solid rgb(120, 126, 126);
+    border: 1px solid rgb(161, 164, 164);
 }
 
 .range-sec .range-font {
