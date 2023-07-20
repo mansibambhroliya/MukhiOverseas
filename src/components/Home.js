@@ -146,57 +146,61 @@ export default function Home() {
       {/*---------------------------- Start Product Range ----------------------- */}
 
       <section className='range-sec full-pad'>
-        <div className=''>
+        <div >
           <div>
             <h1 className='font-cyan text-center prod-range'>Product <span className='text-black'>Range</span></h1>
           </div>
 
-          <div className='range-section d-flex justify-content-around'>
-            <div className="container1">
+          <div className='range-section'>
+            <div className="container">
+              <div className="row justify-center">
               {
                 Range_Product.map((product) => (
-                  <div className="d-flex justify-content-center">
-                    <div className='range-div-w border'>
-                      <div className='range-img-w div-hover' style={{ backgroundImage: `url(${product.img})`}} >
-                        <div className="bg-blur"></div>
-                        <div>
-                          <Link to={product.link} className='sub-img'>
-                            <img src={product.img} alt="" title={product.name} className=''/>
-                          </Link>
+                  <div className="col-lg-3 col-md-4 col-sm-6 mb-15px">
+                    <div className="justify-center">
+                      <div className='range-div-w border'>
+                        <div className='range-img-w div-hover' style={{ backgroundImage: `url(${product.img})` }} >
+                          <div className="bg-blur"></div>
+                          <div>
+                            <Link to={product.link} className='sub-img'>
+                              <img src={product.img} alt="" title={product.name} className='' />
+                            </Link>
+                          </div>
                         </div>
-                      </div>
 
-                      <div className='range-font'>
-                        <Link to="" title={product.name}>{product.name}</Link>
+                        <div className='range-font'>
+                          <Link to="" title={product.name}>{product.name}</Link>
+                        </div>
                       </div>
                     </div>
                   </div>
                 ))
-              }              
+              }
+              </div>
             </div>
           </div>
 
-          <div className='mt-4 justify-center'>
+          <div className='justify-center'>
             <Link to="/products">
-              <input type="button" value='View All Products' className='view-all-btn bg-white font-cyan fw-semibold border py-2 px-4' />
+              <input type="button" value='View All Products' className='view-all-btn bg-white font-cyan fw-semibold border' />
             </Link>
           </div>
         </div>
-      </section>
+      </section >
 
       {/*---------------------------- End Product Range ----------------------- */}
 
 
       {/*---------------------------- Start Featured Products ----------------------- */}
       <section className='featured-main'>
-        <div className=' container   fruit-div'>
+        <div className=' container fruit-div'>
           <div>
-            <h1 className='text-center feature-title '>Featured Products</h1>
+            <h1 className='text-center feature-title'>Featured Products</h1>
           </div>
 
-          <div className="row mb-5">
+          <div className="row mb-5 d-flex justify-content-center">
 
-            <div className="col-lg-3 col-md-4 col-sm-6 justify-center">
+            <div className="col-lg-3 col-md-4 col-sm-6 d-flex justify-content-center">
               <div>
                 <div className='f1-img img-w'>
                   <div className="bg-blur"></div>

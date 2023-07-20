@@ -57,7 +57,7 @@ header,
 }
 
 
-.justify-center {
+.range-sec .justify-center {
     display: flex;
     justify-content: center;
 }
@@ -317,29 +317,22 @@ header {
 /* ------------------------------------------------- Start Product Range  */
 .range-sec {
     background-color: #f3f3f3;
-    padding-top: 50px;
+    padding-top: 40px;
     padding-bottom: 50px;
 }
 
-.container1 {
-    position: relative;
-    width: 1200px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-gap: 15px 10px;
-}
-
-.prod-range {
-    margin-bottom: 40px;
+.container {
+    max-width: 1140px !important;
+    margin: auto;
 }
 
 .range-section {
-    min-width: 20%;
+    margin: 35px 0 20px 0;
 }
 
 .range-sec .range-div-w {
-    /* width: 252px; */
-    height: 280px;
+    width: 252px;
+    /* height: 282px; */
     padding: 10px;
     border-radius: 10px;
     background-color: white;
@@ -354,7 +347,7 @@ header {
 .featured-main .bg-blur,
 .range-sec .bg-blur {
     backdrop-filter: blur(3px);
-    background-color: rgba(239, 232, 232, 0.4);
+    background-color: rgba(239, 232, 232, 0.5);
     width: 100%;
     height: 100%;
 }
@@ -367,7 +360,9 @@ header {
     position: relative;
     overflow: hidden;
 }
-
+.mb-15px{
+    margin-bottom: 15px;
+}
 .range-sec .sub-img img {
     position: absolute;
     margin-right: 100%;
@@ -385,7 +380,7 @@ header {
 }
 
 .range-sec .div-hover:hover {
-    border: 1px solid rgb(151, 153, 153);
+    border: 1px solid rgb(120, 126, 126);
 }
 
 .range-sec .range-font {
@@ -399,7 +394,9 @@ header {
     font-size: 14.3px;
     font-weight: 600;
 }
-
+.range-sec .view-all-btn {
+    padding: 9px 15px;
+}
 .range-sec .view-all-btn:hover {
     color: var(--color-nevy-blue);
 }
@@ -414,10 +411,6 @@ header {
 
 .feature-title {
     margin-bottom: 40px;
-}
-
-.fruit-div {
-    /* padding: 5%; */
 }
 
 .featured-main .featured-font {
