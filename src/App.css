@@ -1,84 +1,149 @@
-.product-card-section {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-}
 
-.product-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  text-align: center;
-}
-
-.product-card img {
-  width: 100%;
-  max-height: 200px;
-  object-fit: cover;
-  border-radius: 5px;
-}
-
-.product-card h3 {
-  margin-top: 10px;
-}
-
-.product-card p {
-  margin-top: 5px;
-}
-
-
-/*  
-.range-sec .r1-img {
-    background-image: url('../img/asset\ 37.jpeg');
+/* .featured-main .f1-img {
+    background-image: url('../img/asset\ 14.jpeg');
     position: relative;
 }
 
-.range-sec .r2-img {
-    background-image: url('../img/asset\ 38.jpeg');
+.featured-main .f2-img {
+    background-image: url('../img/asset\ 15.jpeg');
     position: relative;
 }
 
-.range-sec .r3-img {
-    background-image: url('../img/asset\ 39.jpeg');
+.featured-main .f2-img .sub-img img {
+    height: 235px;
+    width: 240px;
+    position: absolute;
+    top: 0;
+    border-radius: 50%;
+}
+
+.featured-main .f3-img {
+    background-image: url('../img/asset\ 16.jpeg');
     position: relative;
 }
 
-.range-sec .r4-img {
-    background-image: url('../img/asset\ 40.jpeg');
+.featured-main .f3-img {
+    background-image: url('../img/asset\ 16.jpeg');
     position: relative;
 }
 
-.range-sec .r5-img {
-    background-image: url('../img/asset\ 41.jpeg');
+.featured-main .f4-img {
+    background-color: white;
     position: relative;
 }
 
-.range-sec .r5-img img {
-    width: 225px;
-    height: 225px;
-    top: 0px;
+.featured-main .f4-img img {
+    position: absolute;
+    top: 6px;
+    border-radius: none !important;
+    width: 240px;
+    height: 240px;
 }
 
-.range-sec .r6-img {
-    background-image: url('../img/asset\ 42.jpeg');
+.featured-main .f5-img {
+    background-image: url('../img/asset\ 18.jpeg');
     position: relative;
 }
 
-.range-sec .r7-img {
-    background-image: url('../img/asset\ 43.jpeg');
-    position: relative;
+.featured-main .f5-img .sub-img img,
+.featured-main .f6-img .sub-img img {
+    height: 170px;
+    width: 240px;
+    position: absolute;
+    top: 37px;
+    border-radius: 50%;
 }
 
-.range-sec .r8-img {
-    background-image: url('../img/asset\ 44.jpeg');
+.featured-main .f6-img {
+    background-image: url('../img/asset\ 19.png');
     position: relative;
-}
+} */
 
-.range-sec .range-img-w img {
-    width: 144;
-    height: 96;
-}
-*/
+{/* <div className="col-lg-3 col-md-4 col-sm-6 d-flex justify-content-center">
+              <div>
+                <div className='f1-img img-w'>
+                  <div className="bg-blur"></div>
+                  <Link to="/pomegranate" className='sub-img'>
+                    <img src={require('../img/asset 14.jpeg')} alt="" className='img-fluid' />
+                  </Link>
+                </div>
+                <div className='featured-font '>
+                  <Link to="/pomegranate" title='Fresh Pomegranate'>Fresh Pomegranate</Link>
+                </div>
+              </div>
+            </div>
+
+            <div className="col-lg-3 col-md-4 col-sm-6 d-flex justify-content-center">
+              <div>
+                <div className='f2-img img-w'>
+                  <div className="bg-blur"></div>
+                  <Link to="/ginger" className='sub-img'>
+                    <img src={require('../img/asset 15.jpeg')} alt="" />
+
+                  </Link>
+                </div>
+                <div className='featured-font'>
+                  <Link to="/ginger" title='Fresh Ginger'>Fresh Ginger</Link>
+                </div>
+              </div>
+            </div>
+
+            <div className="col-lg-3 col-md-4 col-sm-6 d-flex justify-content-center">
+              <div>
+                <div className='f3-img img-w'>
+                  <div className="bg-blur"></div>
+                  <Link to="/onion" className='sub-img'>
+                    <img src={require('../img/asset 16.jpeg')} alt="" />
+                  </Link>
+                </div>
+                <div className='featured-font'>
+                  <Link to="/onion" title='Fresh Red Onion'>Fresh Red Onion</Link>
+                </div>
+              </div>
+            </div>
+
+            <div className="col-lg-3 col-md-4 col-sm-6 d-flex justify-content-center">
+              <div>
+                <div className='f4-img img-w'>
+                  <div className="bg-blur"></div>
+                  <Link to="/redchilli" className='sub-img4'>
+                    <img src={require('../img/asset 17.jpeg')} alt="" />
+                  </Link>
+                </div>
+                <div className='featured-font'>
+                  <Link to="/redchili" title='Red Chilli Powder'>Red Chilli Powder</Link>
+                </div>
+              </div>
+            </div> */}
+
+
+
+            {/* ---------------------------------------- */}
+
+            {/* <div className="col-lg-3 col-md-4 col-sm-6 d-flex justify-content-center">
+              <div>
+                <div className='f5-img img-w'>
+                  <div className="bg-blur"></div>
+                  <Link to="/pomegranate" className='sub-img'>
+                    <img src={require('../img/asset 18.jpeg')} alt="" />
+                  </Link>
+                </div>
+                <div className='featured-font'>
+                  <Link to="/pomegranate" title='Termeric Powder'>Termeric Powdere</Link>
+                </div>
+              </div>
+            </div>
+
+            <div className="col-lg-3 col-md-4 col-sm-6 d-flex justify-content-center">
+              <div>
+                <div className='f6-img img-w'>
+                  <div className="bg-blur"></div>
+                  <Link to="/pomegranate" className='sub-img'>
+                    <img src={require('../img/asset 19.png')} alt="" />
+                  </Link>
+                </div>
+                <div className='featured-font'>
+                  <Link to="/pomegranate" title='Basmati Rice'>Basmati Rice</Link>
+                </div>
+              </div>
+            </div> */}

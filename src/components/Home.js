@@ -88,7 +88,38 @@ export default function Home() {
       name: "Barley"
     }
   ]
-
+  const Featured = [
+    {
+      f_name: "Fresh Pomegranate",
+      f_link: "/freshpomegranate",
+      f_img: require('../img/14.jpeg')
+    },
+    {
+      f_name: "Fresh Ginger",
+      f_link: "/freshginger",
+      f_img: require('../img/15.jpeg')
+    },
+    {
+      f_name: "Fresh Red Onion",
+      f_link: "/freshredonion",
+      f_img: require('../img/16.jpeg')
+    },
+    {
+      f_name: "Red Chilli Powder",
+      f_link: "/redchillipowder",
+      f_img: require('../img/17.jpeg')
+    },
+    {
+      f_name: "Termeric Powder",
+      f_link: "/termericpowder",
+      f_img: require('../img/18.jpeg')
+    },
+    {
+      f_name: "Basmati Rice",
+      f_link: "/BasmatiRice",
+      f_img: require('../img/19.png')
+    }
+  ]
 
   return (
 
@@ -144,9 +175,8 @@ export default function Home() {
       {/*---------------------------- End QUALITY SPEAKS FOR US! ----------------------- */}
 
       {/*---------------------------- Start Product Range ----------------------- */}
-
       <section className='range-sec full-pad'>
-        <div >
+        <div>
           <div>
             <h1 className='font-cyan text-center prod-range'>Product <span className='text-black'>Range</span></h1>
           </div>
@@ -154,28 +184,28 @@ export default function Home() {
           <div className='range-section'>
             <div className="container">
               <div className="row justify-center">
-              {
-                Range_Product.map((product) => (
-                  <div className="col-lg-3 col-md-4 col-sm-6 col6 mb-15px ">
-                    <div className=" justify-end-l">
-                      <div className='range-div-w border'>
-                        <div className='range-img-w div-hover' style={{ backgroundImage: `url(${product.img})` }} >
-                          <div className="bg-blur"></div>
-                          <div>
-                            <Link to={product.link} className='sub-img'>
-                              <img src={product.img} alt="" title={product.name} className='' />
-                            </Link>
+                {
+                  Range_Product.map((product) => (
+                    <div className="col-lg-3 col-md-4 col-sm-6 col6 mb-15px ">
+                      <div className=" justify-end-l">
+                        <div className='range-div-w border'>
+                          <div className='range-img-w div-hover' style={{ backgroundImage: `url(${product.img})` }} >
+                            <div className="bg-blur"></div>
+                            <div>
+                              <Link to={product.link} className='sub-img'>
+                                <img src={product.img} alt="" title={product.name} className='img-fluid' />
+                              </Link>
+                            </div>
                           </div>
-                        </div>
 
-                        <div className='range-font'>
-                          <Link to="" title={product.name}>{product.name}</Link>
+                          <div className='range-font'>
+                            <Link to={product.link} title={product.name}>{product.name}</Link>
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                ))
-              }
+                  ))
+                }
               </div>
             </div>
           </div>
@@ -187,110 +217,40 @@ export default function Home() {
           </div>
         </div>
       </section >
-
       {/*---------------------------- End Product Range ----------------------- */}
 
 
       {/*---------------------------- Start Featured Products ----------------------- */}
       <section className='featured-main'>
-        <div className=' container fruit-div'>
+        <div className='container fruit-div'>
           <div>
             <h1 className='text-center feature-title'>Featured Products</h1>
           </div>
-
-          <div className="row mb-5 d-flex justify-content-center">
-
-            <div className="col-lg-3 col-md-4 col-sm-6 d-flex justify-content-center">
-              <div>
-                <div className='f1-img img-w'>
-                  <div className="bg-blur"></div>
-                  <Link to="/pomegranate" className='sub-img'>
-                    <img src={require('../img/asset 14.jpeg')} alt="" className='img-fluid' />
-                  </Link>
-                </div>
-                <div className='featured-font '>
-                  <Link to="/pomegranate" title='Fresh Pomegranate'>Fresh Pomegranate</Link>
-                </div>
-              </div>
+          <div className="">
+            <div className="row d-flex justify-content-center">
+              {
+                Featured.map((items) => (
+                  <div className="col-lg-3 col-md-4 col-sm-6 col6 mb-15px">
+                    <div className='justify-end-l'>
+                      <div className='f-div-w'>
+                        <div className='img-w' style={{ backgroundImage: `url(${items.f_img})` }}>
+                          <div className="bg-blur"></div>
+                          <div>
+                            <Link to={items.f_link} className='sub-img'>
+                              <img src={items.f_img} alt="" className='img-fluid' />
+                            </Link>
+                          </div>
+                        </div>
+                        <div className='featured-font justify-center'>
+                          <Link to={items.f_link} title={items.f_name}>Fresh Pomegranate</Link>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                ))
+              }
             </div>
-
-            <div className="col-lg-3 col-md-4 col-sm-6 d-flex justify-content-center">
-              <div>
-                <div className='f2-img img-w'>
-                  <div className="bg-blur"></div>
-                  <Link to="/ginger" className='sub-img'>
-                    <img src={require('../img/asset 15.jpeg')} alt="" />
-
-                  </Link>
-                </div>
-                <div className='featured-font'>
-                  <Link to="/ginger" title='Fresh Ginger'>Fresh Ginger</Link>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-lg-3 col-md-4 col-sm-6 d-flex justify-content-center">
-              <div>
-                <div className='f3-img img-w'>
-                  <div className="bg-blur"></div>
-                  <Link to="/onion" className='sub-img'>
-                    <img src={require('../img/asset 16.jpeg')} alt="" />
-                  </Link>
-                </div>
-                <div className='featured-font'>
-                  <Link to="/onion" title='Fresh Red Onion'>Fresh Red Onion</Link>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-lg-3 col-md-4 col-sm-6 d-flex justify-content-center">
-              <div>
-                <div className='f4-img img-w'>
-                  <div className="bg-blur"></div>
-                  <Link to="/redchilli" className='sub-img4'>
-                    <img src={require('../img/asset 17.jpeg')} alt="" />
-                  </Link>
-                </div>
-                <div className='featured-font'>
-                  <Link to="/redchili" title='Red Chilli Powder'>Red Chilli Powder</Link>
-                </div>
-              </div>
-            </div>
-
-
-
-            {/* ---------------------------------------- */}
-
-            <div className="col-lg-3 col-md-4 col-sm-6 d-flex justify-content-center">
-              <div>
-                <div className='f5-img img-w'>
-                  <div className="bg-blur"></div>
-                  <Link to="/pomegranate" className='sub-img'>
-                    <img src={require('../img/asset 18.jpeg')} alt="" />
-                  </Link>
-                </div>
-                <div className='featured-font'>
-                  <Link to="/pomegranate" title='Termeric Powder'>Termeric Powdere</Link>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-lg-3 col-md-4 col-sm-6 d-flex justify-content-center">
-              <div>
-                <div className='f6-img img-w'>
-                  <div className="bg-blur"></div>
-                  <Link to="/pomegranate" className='sub-img'>
-                    <img src={require('../img/asset 19.png')} alt="" />
-                  </Link>
-                </div>
-                <div className='featured-font'>
-                  <Link to="/pomegranate" title='Basmati Rice'>Basmati Rice</Link>
-                </div>
-              </div>
-            </div>
-
           </div>
-
         </div>
       </section>
       {/*---------------------------- End Featured Products ----------------------- */}

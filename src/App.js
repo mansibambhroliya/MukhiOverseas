@@ -12,7 +12,6 @@ import ContactUs from './components/ContactUs';
 import Navbar from './components/Navbar';
 import 'react-multi-carousel/lib/styles.css';
 import Gotoup from './components/Gotoup';
-import ProductCardSection from './components/ProductCardSection';
 
 function App() {
   return (
@@ -20,9 +19,7 @@ function App() {
       <Routes>
         <Route path="/" element={ <Home/> } />
         <Route path="/about" element={ <AboutUs/> } />
-        <Route path="/contact" element={ <ContactUs/> } />
-        <Route path="/p" element={ <ProductCardSection/> } />
-        
+        <Route path="/contact" element={ <ContactUs/> } />        
       </Routes>
     </>
   );
