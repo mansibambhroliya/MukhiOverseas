@@ -5,15 +5,15 @@ import { Link } from 'react-router-dom'
 export default function MIniFooter() {
     return (
         <>
-            <footer className='container-fluid footer-bg full-pad ' id='mini-footer' >
-                <div className=''>
+            <footer className='container-fluid footer-bg full-pad' id='mini-footer' >
+                <div className='footer-part-1'>
                     <div className="row row-3 p-0">
                         <div className="col1">
-                            <div>
-                                <img className='pe-1' src={require('../img/asset 23.png')} />
-                                <img className='pe-1' src={require('../img/asset 24.png')} />
-                                <img className='pe-1' src={require('../img/asset 25.png')} />
-                                <img className='pe-1' src={require('../img/asset 26.png')} />
+                            <div className='country-img'>
+                                <img className='' src={require('../img/asset 23.png')} />
+                                <img className='' src={require('../img/asset 24.png')} />
+                                <img className='' src={require('../img/asset 25.png')} />
+                                <img className='' src={require('../img/asset 26.png')} />
 
                                 <select data-placeholder="Select Language" name="country" className='lan-input'>
                                     <option value="Afrikaans" disabled selected>Select Language</option>
@@ -93,15 +93,15 @@ export default function MIniFooter() {
                             </div>
                         </div>
 
-                        <div className="col2">
+                        <div className="col2 vn">
                             <div>
-                                <span>Visit No.: </span>
+                                <span>Visitor No.: </span>
                             </div>
                         </div>
                     </div>
 
                     <div className="row row-3">
-                        <div className="col1">
+                        <div className="col1 mb-13">
                             <div className=''>
                                 <Link to="https://www.facebook.com/Mukhioverseas/" className='me-3'>
                                     <img src={require('../img/asset 20.png')} />
@@ -112,15 +112,15 @@ export default function MIniFooter() {
                             </div>
                         </div>
 
-                        <div className="col2 general-link">
+                        <div className="col2 general-link mb-13">
                             <div className=''>
-                                <Link to="/">Home</Link>|
+                                <Link to="/" className='ms-0'>Home</Link>|
                                 <Link to="/about">About Us</Link>|
                                 <Link to="/product">Product</Link>|
                                 <Link to="/contact">Contact Us</Link>|
                                 <Link to="/">Equiry</Link>|
                                 <Link to="/" className='pe-2'>Site Map</Link>
-                                <Link to="http://www.mukhioverseas.com/products.rss" className='p-0'>
+                                <Link to="http://www.mukhioverseas.com/products.rss" className='m-0'>
                                     <img src={require('../img/asset 22.png')} alt="" />
                                 </Link>
                             </div>
@@ -128,7 +128,7 @@ export default function MIniFooter() {
                     </div>
                 </div>
 
-                <div className="row row-3">
+                <div className="row row-3-1 footer-part-2">
                     <div className="col1">
                         <div className='t-center'>
                             Mukhi Overseas <br />

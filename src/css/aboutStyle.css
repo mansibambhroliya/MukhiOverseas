@@ -169,9 +169,11 @@
 .disc-about-sec .a1-font ul li {
     line-height: 25px;
 }
+
 .disc-about-sec .a2-font ul li {
     line-height: 21px;
 }
+
 .disc-about-sec table tr th {
     padding: 10px;
     text-align: end;
@@ -259,10 +261,12 @@
 .con-div ul {
     padding: 0px 12px;
 }
-.link-col b{
+
+.link-col b {
     color: var(--color-light-gray);
     margin-right: 3px;
 }
+
 .con-div ul li {
     text-align: left;
     border-bottom: 0.1px dashed rgba(142, 142, 142, 0.5);
@@ -391,32 +395,52 @@
 
 
 /* ---------------------------------------------- Mini Footer */
+#mini-footer {
+    padding: 15px 184px 30px 184px;
+}
 #mini-footer .general-link a {
-    padding-left: 8px;
-    padding-right: 8px;
+    margin: 0 5.5px;
     font-weight: bold;
+}
+
+.vn {
+    color: rgba(255,255,255,0.7);
+    font-size: 14.5px;
+    font-weight: 700;
+    display: flex;
+    /* align-items: center; */
 }
 
 #mini-footer .general-link {
     font-weight: bold;
     line-height: 19.5px;
-    /* display: block; */
-    /* margin-block-start: 1em; */
-    /* margin-block-end: 1em; */
-    /* margin-inline-start: 0px; */
-    /* margin-inline-end: 0px; */
     overflow-wrap: break-word;
 }
-
-#mini-footer .row .row-3 {
+.country-img img{
+    border: 1px solid rgba(255,255,255,0.5);
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+#mini-footer .row .row-3,
+#mini-footer .row .row-3-1 {
     flex-direction: column;
 }
 
-#mini-footer .row-3 .col1,
-#mini-footer .row-3 .col2 {
-    width: 50%;
+#mini-footer .row-3 .col1{
+    width: 40%;
 }
 
+#mini-footer .row-3 .col2 {
+    width: 60%;
+}
+
+#mini-footer .row-3-1 .col1,
+#mini-footer .row-3-1 .col2{
+    width: 50%;
+}
+#mini-footer .footer-part-1 .row:first-child {
+    margin-bottom:20px;
+}
 #mini-footer .t-center {
     font-size: 11.7px;
 }
@@ -432,4 +456,10 @@
 .justify-end {
     display: flex;
     justify-content: end;
+}
+
+#mini-footer .footer-part-2 {
+    padding-top: 12px;
+    margin-top: 7px;
+    border-top: 0.5px rgba(189, 186, 186, 0.7) dashed;
 }

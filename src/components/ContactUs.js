@@ -67,7 +67,7 @@ export default function ContactUs() {
       {/* --------------------------- End About Name bar ------------------------------ */}
 
       {/* --------------------------- Start Section ------------------------------ */}
-      <section>
+      <section className='contactus-sec'>
         <div className="row row-1 container-fluid" id='contact-sec'>
 
           <div className="col1 pe-1">

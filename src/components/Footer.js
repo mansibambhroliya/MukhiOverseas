@@ -14,7 +14,7 @@ export default function Footer() {
 
     return (
         <>
-            <footer className='container-fluid footer-bg full-pad'>
+            <footer className='container-fluid footer-bg full-pad ' id='main_footer'>
                 <div>
                     {/* ------------------ Accordian ------------------------------ */}
                     <div className="accordion">
@@ -363,19 +363,19 @@ export default function Footer() {
                     </div>
                     {/* ------------------------------------------------ */}
 
-                    <div className="row hide-footer-row">
-                        <div className="col-lg-4 col-md-5 col-sm-7">
-                            <h3 className='pb-1'>Quick Contact</h3>
+                    <div className="row row-5 footer-row">
+                        <div className="col1">
+                            <h3>Quick Contact</h3>
                             <p><BsFillBuildingFill className='f-icon'></BsFillBuildingFill>Mukhi OverSeas</p>
                             <p><AiOutlineUser className='f-icon'></AiOutlineUser> M. D. Sharma</p>
                             <p ><TiLocation className='f-icon'></TiLocation>
                                 <span className='text-uppercase'>shiromani compolex opp baroda express highway ctm, Ghodasar,</span>
                                 <span>Ahemdabad, Gujarat - 390890, India</span>
                             </p>
-                            <p className='f-phone'><FaMobileAlt className='f-phone-icon'></FaMobileAlt>085656345770</p>
+                            <p className='f-phone fw-bold'><FaMobileAlt className='f-phone-icon '></FaMobileAlt> 08048784470</p>
                             <p className='i-mail'><AiOutlineMail className='f-icon'></AiOutlineMail><Link to='/'>mokhoverseas@gmail.com</Link></p>
                             <p>
-                                <Link to="https://www.facebook.com/Mukhioverseas/" className='me-2'>
+                                <Link to="https://www.facebook.com/Mukhioverseas/" className='me-2 pe-1'>
                                     <img src={require('../img/asset 20.png')} />
                                 </Link>
                                 <Link to="https://www.linkedin.com/in/mukhi-overseas-7b8a14190">
@@ -385,27 +385,29 @@ export default function Footer() {
 
                         </div>
 
-                        <div className="col-lg-3 col-md-3 col-sm-5  general-link">
-                            <h3 className='pb-1'>General Liks</h3>
+                        <div className="col2 general-link">
+                            <h3>General Links</h3>
                             <Link to="/">Home</Link><br />
                             <Link to="/about">About Us</Link><br />
-                            <Link to="/product">Product</Link><br />
+                            <Link to="/products">Product</Link><br />
                             <Link to="/contact">Contact Us</Link><br />
-                            <Link to="/">Equiry</Link><br />
-                            <Link to="/">Site Map</Link><br />
+                            <Link to="">Equiry</Link><br />
+                            <Link to="">Site Map</Link><br />
                             <Link to="http://www.mukhioverseas.com/products.rss">
                                 <img src={require('../img/asset 22.png')} alt="" />
                             </Link>
                         </div>
 
-                        <div className="col-lg-5 col-md-4 col-sm-12 input">
+                        <div className="col3 input">
                             <form>
-                                <h3 className='pb-1'>Quick Enquiry</h3>
-                                <span className='d-flex'> <input type="text" placeholder='Your Name' className='w-50 me-4 t-1' />
+                                <h3>Quick Enquiry</h3>
+                                <span className='d-flex'>
+                                    <input type="text" placeholder='Your Name' className='w-50 t-1 me-19px' />
                                     <input type="text" placeholder='Email' className='w-50 t-2' />
                                 </span><br />
+
                                 <div className='d-flex'>
-                                    <span className='me-4 w-50 '>
+                                    <span className='w-50 me-19px'>
                                         <select class="form-select" id="country" name="country" className='t-3'>
 
                                             <option value="AF">Afghanistan</option>
@@ -664,25 +666,24 @@ export default function Footer() {
                                     </span>
                                     <span className='d-flex w-50'>
                                         <input type="text" placeholder='+91' className='t-4 me-1' disabled />
-                                        <input type="text" placeholder='Phone/Mobile' className='t-5 w-100' />
+                                        <input type="text" placeholder='Phone / Mobile' className='t-5 w-100' />
                                     </span>
                                 </div><br />
 
                                 <textarea name="address" cols="5" rows="100" placeholder='Leave a massage for us' className='w-100 t-6 mb-3'></textarea><br />
                                 <input type="submit" value="Send Massage" className='w-100 msg-btn py-2' />
 
-
                             </form>
                         </div>
                     </div>
 
-                    <div className="row px-2">
-                        <div className="col-sm-4 col-12 d-flex justify-content-sm-start justify-content-center ">
-                            <div className='text-sm-start text-center align-center'>
-                                <img className='pe-2' src={require('../img/asset 23.png')} />
-                                <img className='pe-2' src={require('../img/asset 24.png')} />
-                                <img className='pe-2' src={require('../img/asset 25.png')} />
-                                <img className='pe-2' src={require('../img/asset 26.png')} />
+                    <div className="row row-5_2 px-2 mb-21px">
+                        <div className="col1">
+                            <div className='text-sm-start text-center align-center country-img'>
+                                <img className='' src={require('../img/asset 23.png')} />
+                                <img className='' src={require('../img/asset 24.png')} />
+                                <img className='' src={require('../img/asset 25.png')} />
+                                <img className='' src={require('../img/asset 26.png')} />
 
                                 <select data-placeholder="Select Language" name="country" className='lan-input m-md-0 my-2 align-center'>
                                     <option value="Afrikaans" disabled selected>Select Language</option>
@@ -762,31 +763,26 @@ export default function Footer() {
                             </div>
                         </div>
 
-                        <div className="col-sm-8 col-12">
-                            <div className='d-flex justify-content-sm-end justify-content-center mt-2'>
-                                <span >Visit No.:
-                                    <img src={require('../img/asset 27.gif')} alt="" />
-                                    <img src={require('../img/asset 27.gif')} alt="" />
-                                    <img src={require('../img/asset 28.gif')} alt="" />
-                                    <img src={require('../img/asset 29.gif')} alt="" />
-                                    <img src={require('../img/asset 30.gif')} alt="" />
+                        <div className="col2 vn-div">
+                            <div className=''>
+                                <span className='vn'>Visitor No.:
                                 </span>
                             </div>
                         </div>
                     </div>
 
-                    <hr className='text-white mt-3 mb-2' />
+                    <hr className='text-white m-0' />
 
-                    <div className="row p-0 m-0">
-                        <div className="col-sm-6 ">
+                    <div className="row row-5_1 m-0 mt-10px">
+                        <div className="col1">
                             <div className='t-center'>
                                 Mukhi Overseas <br />
                                 Developed & Managed By Weblink.in Pvt.Ltd
                             </div>
                         </div>
 
-                        <div className="col-sm-6  d-flex justify-content-sm-end justify-content-center ">
-                            <div className=''>
+                        <div className="col2">
+                            <div className='footer-logo'>
                                 <img src={require('../img/asset 31.png')} alt="" />
                             </div>
                         </div>

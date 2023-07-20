@@ -75,6 +75,124 @@ export default function ProductCardSection() {
                     </div>
                 </div>
             </section >
+           
+
+            {/* <div className="">
+                <div className='range-div-w border'>
+                  <div className='r1-img range-img-w div-hover'>
+                    <div className="bg-blur"></div>
+                    <div className="">
+                      <Link to="/piper" className='sub-img'>
+                        <img src={require('../img/asset 37.jpeg')} alt="" title='Piper Sudan Grass Seed' />
+                      </Link>
+                    </div>
+                  </div>
+
+                  <div className='range-font'>
+                    <Link to="" title='Piper Sudan Grass Seed'>Piper Sudan Grass Seed</Link>
+                  </div>
+                </div>
+              </div>
+
+              <div className="">
+                <div className='range-div-w border'>
+                  <div className='r2-img range-img-w div-hover'>
+                    <div className="bg-blur"></div>
+                    <Link to="/pomegranate" className='sub-img'>
+                      <img src={require('../img/asset 38.jpeg')} alt="" title='Alfalfa Grass Seeds' />
+                    </Link>
+                  </div>
+                  <div className='range-font'>
+                    <Link to="" title='Alfalfa Grass Seeds' >Alfalfa Grass Seeds</Link>
+                  </div>
+                </div>
+              </div>
+
+              <div className="">
+                <div className='range-div-w border'>
+                  <div className='r3-img range-img-w div-hover'>
+                    <div className="bg-blur"></div>
+                    <Link to="/pomegranate" className='sub-img'>
+                      <img src={require('../img/asset 39.jpeg')} alt="" title='Sorghum' />
+                    </Link>
+                  </div>
+                  <div className='range-font'>
+                    <Link to="" title='Sorghum'> Sorghum </Link>
+                  </div>
+                </div>
+              </div>
+
+              <div className="">
+                <div className='range-div-w border'>
+                  <div className='r4-img range-img-w div-hover'>
+                    <div className="bg-blur"></div>
+                    <Link to="/pomegranate" className='sub-img'>
+                      <img src={require('../img/asset 40.jpeg')} alt="" title='Wheat' />
+                    </Link>
+                  </div>
+                  <div className='range-font '>
+                    <Link to="" title='Wheat' >Wheat</Link>
+                  </div>
+                </div>
+              </div>
+
+
+              <div className="">
+                <div className='range-div-w border'>
+                  <div className='r5-img range-img-w div-hover'>
+                    <div className="bg-blur"></div>
+                    <Link to="/pomegranate" className='sub-img'>
+                      <img src={require('../img/asset 41.jpeg')} alt="" title='Seasame Seeds' />
+                    </Link>
+                  </div>
+                  <div className='range-font'>
+                    <Link to="" title='Seasame Seeds' >Seasame Seeds</Link>
+                  </div>
+                </div>
+              </div>
+
+              <div className="">
+                <div className='range-div-w border'>
+                  <div className='r6-img range-img-w div-hover'>
+                    <div className="bg-blur"></div>
+                    <Link to="/pomegranate" className='sub-img'>
+                      <img src={require('../img/asset 42.jpeg')} alt="" title='Yellow Maize' />
+                    </Link>
+                  </div>
+                  <div className='range-font'>
+                    <Link to="" title='Yellow Maize' >Yellow Maize </Link>
+                  </div>
+                </div>
+              </div>
+
+              <div className="">
+                <div className='range-div-w border'>
+                  <div className='r7-img range-img-w div-hover'>
+                    <div className="bg-blur"></div>
+                    <Link to="/pomegranate" className='sub-img'>
+                      <img src={require('../img/asset 43.jpeg')} alt="" title='Green Millit' />
+                    </Link>
+                  </div>
+                  <div className='range-font'>
+                    <Link to="" title='Green Millit' > Green Millit </Link>
+                  </div>
+                </div>
+              </div>
+
+              <div className="">
+                <div className='range-div-w border'>
+                  <div className='r8-img range-img-w div-hover'>
+                    <div className="bg-blur"></div>
+                    <Link to="/pomegranate" className='sub-img'>
+                      <img src={require('../img/asset 44.jpeg')} alt="" title='Barley' />
+                    </Link>
+                  </div>
+                  <div className='range-font'>
+                    <Link to="" title='Barley' >Barley</Link>
+                  </div>
+                </div>
+              </div>
+ */}
         </>
     )
 }
