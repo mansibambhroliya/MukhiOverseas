@@ -87,7 +87,7 @@ header,
 
 /* ---------------------------------------------- Header */
 header {
-    height: 85px;
+    height: 89px;
     background-color: white;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
     text-transform: capitalize;
@@ -96,23 +96,24 @@ header {
 }
 
 .header {
+    height: 100%;
     display: flex;
-    /* align-items: center; */
+    align-items: center;
     justify-content: space-between;
 }
 
 .header .logo img {
-    width: 80%;
-    padding-top: 10px;
+    width: 83%;
 }
 
 .navbar ul,
-.canva ul {
+.canva ul ,
+.dots-nav ul{
     list-style: none;
     z-index: 1;
 }
 
-.navbar ul li {
+.navbar ul li ,.dots-nav ul li {
     position: relative;
     float: left;
 }
@@ -125,7 +126,7 @@ header {
     display: block;
 }
 
-.navbar ul li ul li a {
+.navbar ul li ul li a{
     margin: 0;
 }
 
@@ -151,10 +152,29 @@ header {
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
     display: none;
 }
-
+.dots-nav ul li ul {
+    position: absolute;
+    top: 55px;
+    width: 210px;
+    left: -190px;
+    background-color: white;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+    display: none;
+    border-radius: 5px;
+    text-transform: lowercase;
+    font-size: 13px;
+}
+.dots-nav ul li ul li {
+    padding: 13px 10px;
+}
 .navbar ul li ul li,
 .canva ul li ul li {
     height: 40px;
+    width: 100%;
+    border-top: 1px solid rgba(7, 2, 2, 0.1);
+}
+.dots-nav ul li ul li{
+    height: 160px;
     width: 100%;
     border-top: 1px solid rgba(7, 2, 2, 0.1);
 }
@@ -162,7 +182,10 @@ header {
 .navbar ul li:focus-within>ul,
 .navbar ul li:hover>ul,
 .canva ul li:focus-within>ul,
-.canva ul li:hover>ul {
+.canva ul li:hover>ul ,
+.dots-nav ul li:focus-within>ul, 
+.dots-nav ul li:hover>ul 
+{
     display: initial;
 }
 
@@ -189,6 +212,11 @@ header {
     justify-content: center;
     background-color: var(--color-cyan);
 }
+.dots-nav .mb-5px {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
 
 /* -----------------------------  Offcanvas */
 .off-canvas-btn {
@@ -229,6 +257,12 @@ header {
     padding: 10px 20px;
     color: var(--color-nevy-blue);
     display: block;
+}
+.three-dot{
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--color-nevy-blue);
+    margin-top: 50%
 }
 
 /* --------------------------------------------------- Banner */
@@ -351,6 +385,7 @@ header {
     height: 100%;
 }
 
+
 .range-sec .range-img-w {
     /* width: 227px; */
     height: 230px;
@@ -424,7 +459,14 @@ header {
     height: 270px;
     position: relative;    
 }
-
+.featured-main  .img-w:hover>.hover-blur{
+    backdrop-filter: blur();
+    background-color: rgba(250, 250, 250, 0.176);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transition: .4s;
+}
 .featured-main .img-w {
     width: 240px;
     height: 240px;

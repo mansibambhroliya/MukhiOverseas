@@ -8,26 +8,24 @@ import Button from 'react-bootstrap/Button';
 import { Affix } from 'rsuite';
 import { BiChevronRight } from "react-icons/bi";
 import { PiDotsThreeVerticalBold } from "react-icons/pi";
+import SendBtn from './SendBtn';
+import { MdOutlineMail } from "react-icons/md";
+import { FaMobileAlt } from "react-icons/fa";
 
-export default function Navbar() {
-
+export default function Navbar2() {
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
-
-
-
   return (
     <>
       <Affix>
         <header className='full-pad'>
           <div className='header'>
-
-            <div className='d-flex align-items-center'>
+            <div>
               {/* --------------------------------start  offcanvas ------------------------- */}
-              <button className='off-canvas-btn  ' onClick={handleShow}>
-                <HiBars3CenterLeft className=''></HiBars3CenterLeft>
+              <button className='off-canvas-btn h-100 p-0' onClick={handleShow}>
+                <HiBars3CenterLeft></HiBars3CenterLeft>
               </button>
               <Offcanvas show={show} onHide={handleClose} className="w-5">
                 <Offcanvas.Header closeButton>
@@ -100,8 +98,8 @@ export default function Navbar() {
               </Link>
             </div>
 
-            <nav class="navbar nav" data-spy="affix" data-offset-top="197">
-              <ul className='m-0'>
+            <nav class="navbar nav ms-auto" data-spy="affix" data-offset-top="197">
+              <ul className='m-0 p-0'>
                 <li className=''><NavLink to="/" >home</NavLink></li>
                 <li><NavLink to="/about" >about Us</NavLink></li>
                 <li><Link to="/" >Product <span><FiChevronDown></FiChevronDown></span></Link>
@@ -149,16 +147,41 @@ export default function Navbar() {
                         <li className='sub-menu-btn '><Link>View All</Link></li>
                       </ul>
                     </li>
-                    
+
                   </ul>
                 </li>
 
                 <li><NavLink to="/contact" >Contact Us</NavLink></li>
+
               </ul>
             </nav>
 
+            <div className='dots-nav d-flex align-items-center mb-0'>
+              <ul className='p-0'>
+                <li><Link ><PiDotsThreeVerticalBold className='three-dot'></PiDotsThreeVerticalBold></Link>
+                  <ul className='p-0'>
+                    <li  className=''>
+                      <div>
+                        <div className='mail-wrap m-0 p-0'>
+                          <p className='d-flex'><span><MdOutlineMail className='fs-5'></MdOutlineMail></span>
+                          <span> mukhioverseas@gmail.com</span>
+                          </p>
+                        </div>
+                        <div>
+                          <FaMobileAlt className='fs-5'></FaMobileAlt> 0856679089
+                        </div>
+                        <SendBtn />
+                      </div>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+
           </div>
         </header>
+
+
       </Affix>
     </>
   )

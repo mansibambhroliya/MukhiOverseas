@@ -23,7 +23,7 @@ export default function Home() {
       alt: "First slide",
       p_1: "WELCOME TO",
       p_2: "MUKHI OVERSEAS",
-      p_3: "We are leading suppliers of animal fodder seeds"
+      p_3: "We are leading suppliers of animal fodder seeds",
     },
     {
       img: require('../img/asset 3.jpeg'),
@@ -130,11 +130,11 @@ export default function Home() {
 
       {/*---------------------------- Start Banner ----------------------- */}
       <div className='banner'>
-        <Carousel activeIndex={index} onSelect={handleSelect}  >
+        <Carousel activeIndex={index} onSelect={handleSelect} className='cut-corner' >
 
           {
             Slide.map((items) => (
-              <Carousel.Item>
+              <Carousel.Item >
                 <img className="d-block w-100" src={items.img} alt={items.alt} />
 
                 <Carousel.Caption className='bg'>
@@ -240,6 +240,7 @@ export default function Home() {
                               <img src={items.f_img} alt="" className='img-fluid' />
                             </Link>
                           </div>
+                          <div className='hover-blur'></div>
                         </div>
                         <div className='featured-font justify-center'>
                           <Link to={items.f_link} title={items.f_name}>Fresh Pomegranate</Link>

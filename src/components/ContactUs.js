@@ -6,9 +6,9 @@ import { MdOutlineMail } from "react-icons/md";
 import { FaMobileAlt } from "react-icons/fa";
 import { IoLocationSharp } from "react-icons/io5";
 import { GiEarthAfricaEurope } from "react-icons/gi";
-import Navbar from './Navbar';
 import MIniFooter from './MIniFooter';
 import Gotoup from './Gotoup';
+import Navbar2 from './Navbar2';
 
 export default function ContactUs() {
 
@@ -44,7 +44,7 @@ export default function ContactUs() {
   return (
     <>
       <Top_Line />
-      <Navbar />
+      <Navbar2 />
       <Gotoup />
       {/* --------------------------- Start About Name bar ------------------------------ */}
       <section className='theme-bg'>

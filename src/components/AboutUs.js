@@ -1,6 +1,5 @@
 import React from 'react'
 import Top_Line from './Top_Line'
-import Navbar from './Navbar'
 import { Link } from 'react-router-dom'
 import { BiChevronRight } from "react-icons/bi";
 import { AiOutlineFileText, AiOutlineUser, AiOutlineMail, AiOutlineRight } from "react-icons/ai";
@@ -10,6 +9,7 @@ import MIniFooter from './MIniFooter';
 import Gotoup from './Gotoup';
 import { useState } from 'react';
 import Collapse from 'react-bootstrap/Collapse';
+import Navbar2 from './Navbar2';
 
 export default function AboutUs() {
 
@@ -143,7 +143,7 @@ export default function AboutUs() {
   return (
     <>
       <Top_Line />
-      <Navbar />
+      <Navbar2 />
       <Gotoup />
 
       {/* --------------------------- Start About Name bar ------------------------------ */}

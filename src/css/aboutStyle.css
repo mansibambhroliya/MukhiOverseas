@@ -8,12 +8,12 @@
     padding: 10px 170px;
 }
 
-.top-line .f-div {
+.f-div {
     color: rgb(209, 218, 225);
 }
 
-.top-line .mail-btn,
-.top-line .sms-btn {
+.top-line-btn .mail-btn,
+.top-line-btn .sms-btn {
     border: none;
     padding: 3px 12px;
     border-radius: 15px;
@@ -22,11 +22,11 @@
     font-weight: bold;
 }
 
-.top-line .mail-btn {
+.top-line-btn .mail-btn {
     background-color: rgb(209, 218, 225);
 }
 
-.top-line .sms-btn,
+.top-line-btn .sms-btn,
 #contact-sec .btn-send {
     background-color: var(--color-cyan);
 }
@@ -42,7 +42,7 @@
     background-color: var(--color-nevy-blue);
 }
 
-.top-line .btn1 div div {
+.top-line-btn .btn1 div div {
     padding: 10px 0;
     border: 1px solid rgb(176, 171, 171);
     margin: 10px 0;
@@ -83,19 +83,19 @@
     margin: -1px !important;
 }
 
-.top-line .btn1 div div select {
+.top-line-btn .btn1 div div select {
     color: rgb(131, 133, 138);
 }
 
-.top-line .btn1 div div input,
-.top-line select,
-.top-line textarea {
+.top-line-btn .btn1 div div input,
+.top-line-btn select,
+.top-line-btn textarea {
     border: none;
     outline: none;
 
 }
 
-.top-line .e-icon {
+.top-line-btn .e-icon {
     margin: 0 10px;
     font-size: 19px;
     color: rgb(101, 97, 97);
@@ -116,6 +116,15 @@
     font-weight: 600;
     height: 40px;
     font-size: 22px;
+}
+.top-line .flex {
+    display: flex;
+}
+.t-div{
+    position: absolute;
+    background-color: black;
+    width: 200px;
+    height: 500px;
 }
 
 /* --------------------------------- About Name */
