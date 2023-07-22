@@ -131,7 +131,6 @@ export default function Home() {
       {/*---------------------------- Start Banner ----------------------- */}
       <div className='banner'>
         <Carousel activeIndex={index} onSelect={handleSelect} className='cut-corner' >
-
           {
             Slide.map((items) => (
               <Carousel.Item >

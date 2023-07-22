@@ -76,7 +76,7 @@
 
 @media (min-width:554px) and (max-width:768px) {
 
-    .range-sec .col6:nth-child(odd) .justify-end-l  {
+    .range-sec .col6:nth-child(odd) .justify-end-l {
         display: flex !important;
         justify-content: end !important;
     }
@@ -87,18 +87,21 @@
     }
 
 }
+
 @media (min-width:576px) and (max-width:768px) {
     .featured-main .col6:nth-child(odd) .justify-end-l {
         display: flex !important;
         justify-content: end !important;
     }
-    .featured-main .col6:nth-child(even) .justify-end-l{
+
+    .featured-main .col6:nth-child(even) .justify-end-l {
         display: flex !important;
         justify-content: start !important;
     }
 }
+
 @media(min-width:993px) {
-    .dots-nav ul{
+    .dots-nav ul {
         display: none;
     }
 }
@@ -108,11 +111,13 @@
         display: none;
     }
 }
-@media (min-width:860px) and (max-width:991px){
+
+@media (min-width:860px) and (max-width:991px) {
     .fruit-div {
         padding: 0 70px;
     }
 }
+
 @media(min-width:641px) and (max-width:955px) {
     #main-about-dis {
         margin-bottom: 60px !important;
@@ -125,12 +130,14 @@
         line-height: 26px !important;
     }
 }
-@media(min-width:800px){
+
+@media(min-width:800px) {
     .banner .cut-corner {
         position: relative;
-        clip-path: polygon(0 0, 100% 0,100% 84%, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 84%, 0 100%);
     }
 }
+
 @media(max-width:800px) {
     .product-text ul li {
         width: 50% !important;
@@ -146,7 +153,7 @@
 
 /* ------------------------------------------------ */
 
-@media(max-width:768px) {   
+@media(max-width:768px) {
 
     .pad-0 {
         padding: 0px 5px;
@@ -237,8 +244,36 @@
     section .accord-p,
     #about-section,
     #main_footer .accordion,
-    .hide-fb-icon {
+    .hide-fb-icon ,
+    .banner .carousel a{
         display: none;
+    }
+
+    .banner:hover > .carousel a{
+        display: block;
+        display: flex;
+        align-items: center;
+    }
+
+    .banner .carousel a.carousel-control-prev,
+    .banner .carousel a.carousel-control-next {
+        top: 39%;
+        width: 53px;
+        height: 53px;
+        background-color: rgb(48, 46, 46);
+    }
+
+    .banner .carousel a.carousel-control-prev:hover,
+    .banner .carousel a.carousel-control-next:hover {
+        background-color: rgb(103, 103, 103);
+    }
+
+    .banner .carousel a.carousel-control-prev {
+        left: 2%;
+    }
+
+    .banner .carousel a.carousel-control-next {
+        right: 2%;
     }
 
     .contactus-sec .row .row-1 {
@@ -295,12 +330,15 @@
     .header {
         padding: 0 5px !important;
     }
+
     .spacer-p-name {
         padding: 39px 13px 23px 13px !important;
     }
+
     #contact-sec {
         padding: 50px 0px 28px 0px !important;
     }
+
     #contact-sec .pad {
         padding: 30px 20px !important;
         margin-bottom: 16px;

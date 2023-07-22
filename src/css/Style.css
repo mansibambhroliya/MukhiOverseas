@@ -107,13 +107,14 @@ header {
 }
 
 .navbar ul,
-.canva ul ,
-.dots-nav ul{
+.canva ul,
+.dots-nav ul {
     list-style: none;
     z-index: 1;
 }
 
-.navbar ul li ,.dots-nav ul li {
+.navbar ul li,
+.dots-nav ul li {
     position: relative;
     float: left;
 }
@@ -126,7 +127,7 @@ header {
     display: block;
 }
 
-.navbar ul li ul li a{
+.navbar ul li ul li a {
     margin: 0;
 }
 
@@ -152,6 +153,7 @@ header {
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
     display: none;
 }
+
 .dots-nav ul li ul {
     position: absolute;
     top: 55px;
@@ -164,16 +166,19 @@ header {
     text-transform: lowercase;
     font-size: 13px;
 }
+
 .dots-nav ul li ul li {
     padding: 13px 10px;
 }
+
 .navbar ul li ul li,
 .canva ul li ul li {
     height: 40px;
     width: 100%;
     border-top: 1px solid rgba(7, 2, 2, 0.1);
 }
-.dots-nav ul li ul li{
+
+.dots-nav ul li ul li {
     height: 160px;
     width: 100%;
     border-top: 1px solid rgba(7, 2, 2, 0.1);
@@ -182,10 +187,9 @@ header {
 .navbar ul li:focus-within>ul,
 .navbar ul li:hover>ul,
 .canva ul li:focus-within>ul,
-.canva ul li:hover>ul ,
-.dots-nav ul li:focus-within>ul, 
-.dots-nav ul li:hover>ul 
-{
+.canva ul li:hover>ul,
+.dots-nav ul li:focus-within>ul,
+.dots-nav ul li:hover>ul {
     display: initial;
 }
 
@@ -212,6 +216,7 @@ header {
     justify-content: center;
     background-color: var(--color-cyan);
 }
+
 .dots-nav .mb-5px {
     margin-top: 10px;
     margin-bottom: 10px;
@@ -258,7 +263,8 @@ header {
     color: var(--color-nevy-blue);
     display: block;
 }
-.three-dot{
+
+.three-dot {
     font-size: 22px;
     font-weight: 700;
     color: var(--color-nevy-blue);
@@ -303,9 +309,11 @@ header {
         transform: scale(1.5);
     }
 }
-.p{
+
+.p {
     line-height: 19px;
 }
+
 .banner .caption-div p {
     margin-left: -500%;
     transition: .3s linear;
@@ -325,6 +333,10 @@ header {
 
 .banner .caption-div {
     display: block;
+}
+
+.carousel .carousel-indicators button  {
+    display: none;
 }
 
 /* ------------------------------------------------ QUALITY SPEAKS FOR US!  */
@@ -363,10 +375,12 @@ header {
     margin: 35px 0 20px 0;
 }
 
-.range-sec .justify-end-l ,.featured-main .justify-end-l{
+.range-sec .justify-end-l,
+.featured-main .justify-end-l {
     display: flex;
     justify-content: center;
 }
+
 .range-sec .range-div-w {
     width: 252px;
     height: 282px;
@@ -394,9 +408,11 @@ header {
     position: relative;
     overflow: hidden;
 }
-.mb-15px{
+
+.mb-15px {
     margin-bottom: 15px;
 }
+
 .range-sec .sub-img img {
     position: absolute;
     margin-right: 100%;
@@ -428,9 +444,11 @@ header {
     font-size: 14.3px;
     font-weight: 600;
 }
+
 .range-sec .view-all-btn {
     padding: 9px 15px;
 }
+
 .range-sec .view-all-btn:hover {
     color: var(--color-nevy-blue);
 }
@@ -441,12 +459,13 @@ header {
     font-size: var(--font-baloo);
     background-size: cover;
     padding-top: 120px;
-    padding-bottom:60px;
+    padding-bottom: 60px;
 }
 
 .featured-main .container {
     max-width: 1170px !important;
 }
+
 .feature-title {
     margin-bottom: 40px;
 }
@@ -454,12 +473,14 @@ header {
 .featured-main .featured-font {
     margin: 10px 0;
 }
+
 .featured-main .f-div-w {
     width: 240px;
     height: 270px;
-    position: relative;    
+    position: relative;
 }
-.featured-main  .img-w:hover>.hover-blur{
+
+.featured-main .img-w:hover>.hover-blur {
     backdrop-filter: blur();
     background-color: rgba(250, 250, 250, 0.176);
     width: 100%;
@@ -467,6 +488,7 @@ header {
     position: absolute;
     transition: .4s;
 }
+
 .featured-main .img-w {
     width: 240px;
     height: 240px;
@@ -474,8 +496,9 @@ header {
     align-items: center;
     position: relative;
     border-radius: 50%;
-    overflow: hidden ;
+    overflow: hidden;
 }
+
 .featured-main .img-w img {
     width: 139;
     height: 124;
