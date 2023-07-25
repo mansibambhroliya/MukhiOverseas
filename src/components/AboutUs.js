@@ -303,79 +303,26 @@ export default function AboutUs() {
             </div>
             <Collapse in={isActive}>
               <div className='example-collapse-text font-black link-col px-3 py-2'>
-                <ul className='ul-style'>
-                  <li ><Link to="/indianrice" className=''>Indian Rice</Link>
-                    <ul>
-                      <li><Link to="/basmatirice"><BiChevronRight></BiChevronRight>Basmatirice</Link></li>
-                      <li><Link to="/nonbasmatirice"><BiChevronRight></BiChevronRight>Non Basmatirice</Link></li>
-                    </ul>
-                  </li>
-                </ul>
-
-                <ul className='ul-style'>
-                  <li ><Link to="/grains">Grains</Link>
-                    <ul>
-                      <li><Link to="/greenmillet"><BiChevronRight></BiChevronRight>Green Millet </Link></li>
-                      <li><Link to="/yellowmaize"><BiChevronRight></BiChevronRight>Yellow Maize </Link></li>
-                      <li><Link to="/barly"><BiChevronRight></BiChevronRight>Barly</Link></li>
-                      <li><Link to="/sorgum"><BiChevronRight></BiChevronRight>Sorgum </Link></li>
-                      <li><Link to="/wheat"><BiChevronRight></BiChevronRight>Wheat </Link></li>
-                      <li><Link to="sesameseeds"><BiChevronRight></BiChevronRight>Sesame Seeds </Link></li>
-                    </ul>
-                  </li>
-                </ul>
-
-                <ul className='ul-style'>
-                  <li ><Link to="/foddderseeds">Fodder Seeds</Link>
-                    <ul>
-                      <li><Link to="/alfalfagrassseeds"><BiChevronRight></BiChevronRight>Alfalfa Grass Seeds </Link></li>
-                      <li><Link to="/pipersudangrassseeds"><BiChevronRight></BiChevronRight>Piper Sudan Grass Seeds </Link></li>
-                    </ul>
-                  </li>
-                </ul>
-
-                <ul className='ul-style'>
-                  <li ><Link to="/freshfruits">Fresh Fruits</Link>
-                    <ul>
-                      <li><Link to="/freshpomegrants"><BiChevronRight></BiChevronRight>Pomegrants </Link></li>
-                    </ul>
-                  </li>
-                </ul>
-
-                <ul className='ul-style'>
-                  <li ><Link to="/indianrice" className=''>Indian Rice</Link>
-                    <ul>
-                      <li><Link to="/basmatirice"><BiChevronRight></BiChevronRight>Basmatirice</Link></li>
-                      <li><Link to="/nonbasmatirice"><BiChevronRight></BiChevronRight>Non Basmatirice</Link></li>
-                    </ul>
-                  </li>
-                </ul>
-
-                <ul className='ul-style'>
-                  <li ><Link to="/freshvegetable">Fresh Vegetables</Link>
-                    <ul>
-                      <li><Link to="/freshginger"><BiChevronRight></BiChevronRight>Fresh Ginger</Link></li>
-                      <li><Link to="freshredonion"><BiChevronRight></BiChevronRight>Fresh Red Onion</Link></li>
-                    </ul>
-                  </li>
-                </ul>
-
-                <ul className='ul-style'>
-                  <li ><Link to="/indianspices">Indian Spices</Link>
-                    <ul>
-                      <li><Link to="/ajwainseeds"><BiChevronRight></BiChevronRight>Ajwain Seeds </Link></li>
-                      <li><Link to="/aselioseeds"><BiChevronRight></BiChevronRight>Aselio Seeds </Link></li>
-                      <li><Link to="/corianderseeds"><BiChevronRight></BiChevronRight>Coriander Seeds </Link></li>
-                      <li><Link to="cuminseeds"><BiChevronRight></BiChevronRight>Cumin Seeds </Link></li>
-                      <li><Link to="/fennelseeds"><BiChevronRight></BiChevronRight>Fennel seeds </Link></li>
-                      <li><Link to="/fenugreekseeds"><BiChevronRight></BiChevronRight>Fenugreek Seeds </Link></li>
-                      <li><Link to="/bayleaves"><BiChevronRight></BiChevronRight>Bay Leaves </Link></li>
-                      <li><Link to="/sennaleaves"><BiChevronRight></BiChevronRight>Senna Leaves  </Link></li>
-                      <li><Link to="/redchillipowder"><BiChevronRight></BiChevronRight>Red Chilli Powder </Link></li>
-                      <li><Link to="/turmericpowder"><BiChevronRight></BiChevronRight>Termeric Powder </Link></li>
-                    </ul>
-                  </li>
-                </ul>
+                <div className='link-col'>
+                  {
+                    products.map((product) => (
+                      <ul className='ul-style'>
+                        <li><Link to={product.link}>{product.name}</Link>
+                          {
+                            product.sub_products.map((items) => (
+                              <ul>
+                                <li className='d-flex'>
+                                  <b className='me-3px'><BiChevronRight></BiChevronRight></b>
+                                  <p className='m-0'><Link to={items.sub_link}> {items.sub_name} </Link></p>
+                                </li>
+                              </ul>
+                            ))
+                          }
+                        </li>
+                      </ul>
+                    ))
+                  }
+                </div>
               </div>
             </Collapse>
           </div>

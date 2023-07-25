@@ -3,14 +3,87 @@ import { BsFillBuildingFill } from "react-icons/bs";
 import { AiOutlineUser, AiOutlineMail, AiFillLinkedin } from "react-icons/ai";
 import { TiLocation } from "react-icons/ti";
 import { FaMobileAlt, FaFacebookSquare } from "react-icons/fa";
-import { Link } from 'react-router-dom';
-import { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import { useState, useEffect } from 'react';
 import Collapse from 'react-bootstrap/Collapse';
+import { useRef } from 'react'; // send email
+import emailjs from '@emailjs/browser';
+
 
 export default function Footer() {
     const [isActive, setIsActive] = useState(false);
     const [isLink, setIsLink] = useState(false);
     const [isEnquiry, setIsEnquiry] = useState(false);
+
+    const form = useRef(); // send Email
+    const navigate = useNavigate(); // redirect to /equiry
+
+
+    // ------------------------- validation
+    const initialValues = { user_name: "", user_email: "", country: "", mobileno: "", msg: "" };
+    const [formValues, setformValues] = useState(initialValues);
+    const [formErrors, setformErrors] = useState({});
+    const [isSubmit, setIsSubmit] = useState(false);
+
+    const handleChange = (e) => {
+        // console.log(e.target);
+        const { name, value } = e.target;
+        setformValues({ ...formValues, [name]: value });
+        console.log(formValues);
+    };
+
+    const handleSubmit = (e) => {
+        //  For validation
+        e.preventDefault();
+        setformErrors(validate(formValues));
+        setIsSubmit(true);
+
+        // for send Email
+        emailjs.sendForm('service_h4h689h', 'template_q3kcaoh', form.current, '4ycg7NDPP1DT499TG')
+            .then((result) => {
+                console.log(result.text);
+                console.log("msg send");
+            }, (error) => {
+                console.log(error.text);
+            });
+        // e.target.reset();
+    };
+
+    useEffect(() => {
+        if (Object.keys(formErrors).length === 0 && isSubmit) {
+            // console.log(formValues);
+            navigate('/thanks');
+        }
+    }, [formErrors]);
+
+    const validate = (values) => {
+        const errors = {};
+        const regex = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/i;
+        const numbers = /^\d{10}$/;
+        if (!values.user_name) {
+            errors.user_name = "Please Enter Your Name";
+        }
+        else if (!values.user_email) {
+            errors.user_email = "Please enter email.";
+        }
+        else if (!regex.test(values.user_email)) {
+            errors.user_email = "Please enter valid email.";
+        }
+        else if (!values.mobileno) {
+            errors.mobileno = "Please Enter Phone/Mobile Number.";
+        }
+        else if (!numbers.test(values.mobileno)) {
+            errors.mobileno = "Please Enter Your 10 digits mobile number.";
+        }
+        else if (values.msg.length <= 20) {
+            errors.msg = "Please Enter Your Requirement Details [ Minimum 20 Characters ]";
+        }
+
+        return errors;
+    };
+
+    // -----------------
+
 
     return (
         <>
@@ -397,18 +470,25 @@ export default function Footer() {
                                 <img src={require('../img/asset 22.png')} alt="" />
                             </Link>
                         </div>
+                        {/* {Object.keys(formErrors).length === 0 && isSubmit ? (<Link to='/enquiry'></Link>) : <pre className="error"> {JSON.stringify(formValues, undefined , 2)} </pre> } */}
 
                         <div className="col3 input">
-                            <form>
+                            <form ref={form} onSubmit={handleSubmit} >
                                 <h3>Quick Enquiry</h3>
                                 <span className='d-flex'>
-                                    <input type="text" placeholder='Your Name' className='w-50 t-1 me-19px' />
-                                    <input type="text" placeholder='Email' className='w-50 t-2' />
+                                    <div className='me-19px w-50'>
+                                        <input type="text" placeholder='Your Name' className='w-100 t-1 ' name='user_name' value={formValues.user_name} onChange={handleChange} />
+                                        <p className="footer-error">{formErrors.user_name}</p>
+                                    </div>
+                                    <div className='w-50'>
+                                        <input type="email" placeholder='Email' className='w-100 t-2' name='user_email' value={formValues.user_email} onChange={handleChange} />
+                                        <p className="footer-error">{formErrors.user_email}</p>
+                                    </div>
                                 </span><br />
 
                                 <div className='d-flex'>
                                     <span className='w-50 me-19px'>
-                                        <select class="form-select" id="country" name="country" className='t-3'>
+                                        <select class="form-select" id="country" name="country" className='t-3' value={formValues.country} onChange={handleChange}>
 
                                             <option value="AF">Afghanistan</option>
                                             <option value="AX">Aland Islands</option>
@@ -664,15 +744,20 @@ export default function Footer() {
                                             <option value="ZW">Zimbabwe</option>
                                         </select>
                                     </span>
-                                    <span className='d-flex w-50'>
-                                        <input type="text" placeholder='+91' className='t-4 me-1' disabled />
-                                        <input type="text" placeholder='Phone / Mobile' className='t-5 w-100' />
+                                    <span className='w-50'>
+                                        <div className='d-flex'>
+                                            <input type="text" placeholder='+91' className='t-4 me-1' disabled />
+
+                                            <input type="text" placeholder='Phone / Mobile' className='t-5 w-100' name='mobileno' value={formValues.mobileno} onChange={handleChange} />
+                                        </div>
+                                        <p className="footer-error">{formErrors.mobileno}</p>
                                     </span>
                                 </div><br />
 
-                                <textarea name="address" cols="5" rows="100" placeholder='Leave a massage for us' className='w-100 t-6 mb-3'></textarea><br />
-                                <input type="submit" value="Send Massage" className='w-100 msg-btn py-2' />
-
+                                <textarea name="msg" cols="5" rows="100" placeholder='Leave a massage for us' className='w-100 t-6' value={formValues.msg} onChange={handleChange}></textarea>
+                                <pre className="footer-error">{formErrors.msg}</pre>
+                                <input type="submit" value="Send Massage" className='w-100 msg-btn py-2 mt-3' />
+                                {/* <button className="w-100 msg-btn py-2 mt-3" >Submit</button> */}
                             </form>
                         </div>
                     </div>
@@ -787,8 +872,8 @@ export default function Footer() {
                             </div>
                         </div>
                     </div>
-                </div>
-            </footer>
+                </div >
+            </footer >
 
         </>
     )

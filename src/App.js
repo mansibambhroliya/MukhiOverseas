@@ -12,6 +12,8 @@ import ContactUs from './components/ContactUs';
 import Navbar from './components/Navbar';
 import 'react-multi-carousel/lib/styles.css';
 import Gotoup from './components/Gotoup';
+import Footer from './components/Footer';
+import Enquiry from './components/Enquiry';
 
 function App() {
   return (
@@ -20,6 +22,8 @@ function App() {
         <Route path="/" element={ <Home/> } />
         <Route path="/about" element={ <AboutUs/> } />
         <Route path="/contact" element={ <ContactUs/> } />        
+        <Route path="/footer" element={ <Footer/> } />        
+        <Route path="/thanks" element={ <Enquiry/> } />        
       </Routes>
     </>
   );

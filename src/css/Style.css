@@ -791,3 +791,8 @@ footer .lan-input {
 .goto-up:hover {
     background-color: var(--color-nevy-blue);
 }
+.footer-error{
+    font-size: 10.4px;
+    color: white !important;
+    margin: 0;
+}
