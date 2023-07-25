@@ -6,6 +6,7 @@ import Navbar2 from './Navbar2';
 import Collapse from 'react-bootstrap/Collapse';
 import MIniFooter from './MIniFooter';
 import { useState } from 'react';
+import Gotoup from './Gotoup';
 
 export default function Enquiry() {
     const [isActive, setIsActive] = useState(false); // for accordian
@@ -138,6 +139,7 @@ export default function Enquiry() {
         <>
             <Top_Line />
             <Navbar2 />
+            <Gotoup />
             {/* --------------------------- Start About Name bar ------------------------------ */}
             <section className='theme-bg'>
                 <div className='about-sec full-pad '>
